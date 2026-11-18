@@ -521,15 +521,120 @@ app.post('/api/chat', async (req, res) => {
 
     const lowerQuery = query.toLowerCase().trim();
 
-    // Check if query is asking for personal student metrics (attendance, CGPA, advisor, hostel, room, name, id, email, etc.)
+    // --- STEP 1: Check if query is explicitly asking about a circular / notice / announcement ---
+    const isNoticeQuery = /circular|notice|announcement/i.test(lowerQuery);
+    if (isNoticeQuery) {
+      if (isAtlasConnected) {
+        try {
+          memoryNotices = await Notice.find({}).sort({ createdAt: -1 }).lean();
+        } catch (e) {}
+      }
+
+      // Check if query contains a quoted title or mentions a specific notice title
+      const quotedMatch = query.match(/["']([^"']+)["']/);
+      let matchedNotice = null;
+
+      if (memoryNotices && memoryNotices.length > 0) {
+        if (quotedMatch) {
+          const targetTitle = quotedMatch[1].trim().toLowerCase();
+          // 1. Exact match with quoted title
+          matchedNotice = memoryNotices.find(n => n.title.trim().toLowerCase() === targetTitle);
+          // 2. If not exact, find the closest matching title
+          if (!matchedNotice) {
+            const candidates = memoryNotices.filter(n => {
+              const nt = n.title.trim().toLowerCase();
+              return nt.includes(targetTitle) || targetTitle.includes(nt);
+            });
+            if (candidates.length > 0) {
+              candidates.sort((a, b) => Math.abs(a.title.length - targetTitle.length) - Math.abs(b.title.length - targetTitle.length));
+              matchedNotice = candidates[0];
+            }
+          }
+        }
+
+        // If no quoted match or not found yet, search by longest title match in lowerQuery
+        if (!matchedNotice) {
+          const titleMatches = memoryNotices.filter(n => lowerQuery.includes(n.title.trim().toLowerCase()));
+          if (titleMatches.length > 0) {
+            // Sort by longest title so specific titles win over short 1-word titles like "holidays"
+            titleMatches.sort((a, b) => b.title.length - a.title.length);
+            matchedNotice = titleMatches[0];
+          }
+        }
+
+        // 3. Keyword overlap match if direct title not found
+        if (!matchedNotice) {
+          let maxScore = 0;
+          for (const n of memoryNotices) {
+            const nTokens = (n.title + ' ' + n.content).toLowerCase().split(/\W+/).filter(w => w.length > 2);
+            const qTokens = lowerQuery.split(/\W+/).filter(w => w.length > 2 && !['tell', 'more', 'details', 'about', 'the', 'circular', 'notice'].includes(w));
+            const overlap = qTokens.filter(t => nTokens.includes(t)).length;
+            if (overlap > maxScore) {
+              maxScore = overlap;
+              matchedNotice = n;
+            }
+          }
+        }
+      }
+
+      if (matchedNotice) {
+        const botAnswer = `### 📢 Official Circular: **${matchedNotice.title}**\n\n` +
+          `- **Target Batches:** **${matchedNotice.targetBatches?.join(', ') || 'All Batches'}**\n` +
+          `- **Category:** \`${(matchedNotice.category || 'general').toUpperCase()}\` • Priority: **${(matchedNotice.priority || 'normal').toUpperCase()}**\n` +
+          `- **Issued By:** **${matchedNotice.postedBy || 'University Administration'}**\n` +
+          `- **Date Published:** ${new Date(matchedNotice.createdAt).toLocaleDateString()}\n\n` +
+          `#### 📄 Circular Details:\n${matchedNotice.content}\n\n` +
+          `*This is an official administrative circular. For questions or exceptions, contact ${matchedNotice.postedBy || 'the Academic Office'}.*`;
+
+        const botMessage = {
+          sender: 'bot',
+          text: botAnswer,
+          confidence: 1.0,
+          sources: [`Official Notice Board: ${matchedNotice.title}`],
+          category: matchedNotice.category || 'notice',
+          latencyMs: 8,
+          personalizedFor: matchedNotice.targetBatches?.[0] || batch,
+          timestamp: new Date()
+        };
+
+        const userMessage = { sender: 'user', text: query, timestamp: new Date() };
+
+        if (isAtlasConnected) {
+          try {
+            await ChatSession.findOneAndUpdate(
+              { sessionId },
+              { $push: { messages: { $each: [userMessage, botMessage] } }, $set: { updatedAt: new Date() } },
+              { upsert: true, new: true }
+            );
+          } catch (e) {}
+        }
+
+        return res.json({
+          success: true,
+          query,
+          batch: matchedNotice.targetBatches?.includes(batch) ? batch : (matchedNotice.targetBatches?.[0] || 'All'),
+          answer: botAnswer,
+          confidence: 1.0,
+          sources: [`Official Notice Board: ${matchedNotice.title}`],
+          category: matchedNotice.category || 'notice',
+          latencyMs: 8,
+          retrievalType: `Official Circular Match (${batch})`,
+          matchedItem: matchedNotice
+        });
+      }
+    }
+
+    // --- STEP 2: Check if query is asking for personal student metrics (attendance, CGPA, advisor, hostel, room, name, id, email, etc.)
     // or if an explicit ID number is provided in the query string (e.g. R210177, R210137, PUC-2026-102)
     const explicitIdMatch = query.match(/\b([A-Za-z]\d{6}|\d{7,10}|PUC-\d{4}-\d{3})\b/i);
     const targetStudentId = (explicitIdMatch ? explicitIdMatch[1] : (studentId || studentUser?.id || '')).trim().toUpperCase();
 
-    // Check if query is asking for personal student details or identity
-    const isPersonalQuery = /(^|\b)(attendance|present|absent|classes\s*attended|bunk|shortage|condonation|eligib|cgpa|gpa|marks|grade|score|rank|advisor|mentor|counselor|faculty\s*advisor|faculty\s*mentor|guide|hostel|room|gh2|bh2|curfew|details|profile|info|information|record|records|hall\s*ticket|about\s*me|who\s*am\s*i|who\s*i\s*am|whoami|my\s*name|what\s*is\s*my\s*name|what\s*s\s*my\s*name|my\s*id|what\s*is\s*my\s*id|id\s*number|roll\s*number|roll\s*no|my\s*roll|student\s*id|my\s*email|what\s*is\s*my\s*email|my\s*mail|my\s*branch|my\s*department|my\s*dept|my\s*section|my\s*batch|my\s*sem|my\s*semester|my\s*hostel|my\s*room|my\s*cgpa|my\s*attendance|my\s*advisor|myself|am\s*i)(\b|$)/i.test(lowerQuery)
+    // Check if query is asking for personal student details or identity (NOT circular/notice queries)
+    const isPersonalQuery = !isNoticeQuery && (
+      /(^|\b)(attendance|present|absent|classes\s*attended|bunk|shortage|condonation|eligib|cgpa|gpa|marks|grade|score|rank|advisor|mentor|counselor|faculty\s*advisor|faculty\s*mentor|guide|hostel|room|gh2|bh2|curfew|hall\s*ticket|about\s*me|who\s*am\s*i|who\s*i\s*am|whoami|my\s*name|what\s*is\s*my\s*name|what\s*s\s*my\s*name|my\s*id|what\s*is\s*my\s*id|id\s*number|roll\s*number|roll\s*no|my\s*roll|student\s*id|my\s*email|what\s*is\s*my\s*email|my\s*mail|my\s*branch|my\s*department|my\s*dept|my\s*section|my\s*batch|my\s*sem|my\s*semester|my\s*hostel|my\s*room|my\s*cgpa|my\s*attendance|my\s*advisor|my\s*details|my\s*profile|my\s*info|my\s*record|my\s*records|student\s*details|student\s*profile|personal\s*details)(\b|$)/i.test(lowerQuery)
       || (targetStudentId && /\b(my|i|me|myself)\b/i.test(lowerQuery) && /\b(name|id|roll|email|mail|advisor|mentor|hostel|room|cgpa|gpa|marks|attendance|branch|department|section|details|profile|record)\b/i.test(lowerQuery))
-      || (targetStudentId && /^(what|tell|show|who|give).*\b(my|me)\b/i.test(lowerQuery));
+      || (targetStudentId && /^(what|tell|show|who|give)\b.*\b(my|me)\b/i.test(lowerQuery) && !/\b(circular|notice|announcement)\b/i.test(lowerQuery))
+    );
 
     if (targetStudentId && (isPersonalQuery || explicitIdMatch)) {
       let student = null;

@@ -167,10 +167,22 @@ export function queryRAGEngine(query, studentBatch = 'E3', knowledgeItems = [], 
       let maxScore = -1;
 
       for (const notice of matchingNotices) {
+        const cleanTitle = cleanAndNormalize(notice.title);
+        let score = 0;
+
+        // Exact or strong title match
+        if (cleanedQuery.includes(cleanTitle) || cleanTitle.includes(cleanedQuery)) {
+          score += 20;
+        }
+
         const noticeTokens = tokenize(notice.title + ' ' + notice.content).map(stem);
         const overlap = noticeTokens.filter(t => stemmedQueryTokens.includes(t)).length;
-        let score = overlap;
-        if (notice.targetBatches && notice.targetBatches.includes(activeBatch)) score += 2;
+        score += overlap;
+
+        if (overlap > 0 && notice.targetBatches && notice.targetBatches.includes(activeBatch)) {
+          score += 2;
+        }
+
         if (score > maxScore) {
           maxScore = score;
           bestNotice = notice;
