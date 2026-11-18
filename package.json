@@ -1,0 +1,24 @@
+{
+  "name": "campusconnect",
+  "version": "1.0.0",
+  "description": "CampusConnect – A RAG-based AI Chatbot for College Information Retrieval",
+  "main": "backend/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "node backend/server.js",
+    "client": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build"
+  },
+  "keywords": [
+    "campusconnect",
+    "rag",
+    "ai-chatbot",
+    "college-information-retrieval",
+    "react",
+    "mongodb-atlas",
+    "nlp"
+  ],
+  "author": "Antigravity Pair Programmer",
+  "license": "MIT"
+}
