@@ -521,8 +521,28 @@ app.post('/api/chat', async (req, res) => {
 
     const lowerQuery = query.toLowerCase().trim();
 
-    // --- STEP 1: Check if query is explicitly asking about a circular / notice / announcement ---
-    const isNoticeQuery = /circular|notice|announcement/i.test(lowerQuery);
+    // Determine active batch context
+    const activeBatch = (studentUser?.batch || batch || 'E4').trim().toUpperCase();
+
+    // --- STEP 1: Check if query is asking about circulars / notices / announcements ---
+    const isUrgentOrImportantNoticeQuery = (
+      /(^|\b)(import|important|urgent|priority|pinned|critical)\b.*(notice|circular|announcement)/i.test(lowerQuery)
+      || /(notice|circular|announcement)s?.*(import|important|urgent|priority|pinned|critical)/i.test(lowerQuery)
+      || /^(import|important|urgent|priority|pinned|critical)\s*(notices?|circulars?|announcements?)$/i.test(lowerQuery)
+      || /^import\s*notices?$/i.test(lowerQuery)
+      || /^urgent\s*notices?$/i.test(lowerQuery)
+      || /^important\s*notices?$/i.test(lowerQuery)
+    );
+
+    const isLatestNoticeQuery = (
+      /(^|\b)(latest|recent|new|today|current|active|all|what are the|what are|show|list|give me|check)\b.*(notice|circular|announcement)/i.test(lowerQuery)
+      || /^(what are\s*)?(the\s*)?(latest\s*)?(notices|circulars|announcements)$/i.test(lowerQuery)
+      || /^(show\s*)?(all\s*)?(notices|circulars|announcements)$/i.test(lowerQuery)
+      || /^(notices|circulars|announcements)$/i.test(lowerQuery)
+      || /^(notice|circular)\s*board$/i.test(lowerQuery)
+    );
+
+    const isNoticeQuery = isUrgentOrImportantNoticeQuery || isLatestNoticeQuery || /circular|notice|announcement/i.test(lowerQuery);
     if (isNoticeQuery) {
       if (isAtlasConnected) {
         try {
@@ -530,49 +550,230 @@ app.post('/api/chat', async (req, res) => {
         } catch (e) {}
       }
 
-      // Check if query contains a quoted title or mentions a specific notice title
+      // Subcase 1: Check if query contains a quoted title or mentions a specific notice title
       const quotedMatch = query.match(/["']([^"']+)["']/);
       let matchedNotice = null;
 
+      if (quotedMatch && memoryNotices && memoryNotices.length > 0) {
+        const targetTitle = quotedMatch[1].trim().toLowerCase();
+        // 1. Exact match with quoted title
+        matchedNotice = memoryNotices.find(n => n.title.trim().toLowerCase() === targetTitle);
+        // 2. If not exact, find the closest matching title
+        if (!matchedNotice) {
+          const candidates = memoryNotices.filter(n => {
+            const nt = n.title.trim().toLowerCase();
+            return nt.includes(targetTitle) || targetTitle.includes(nt);
+          });
+          if (candidates.length > 0) {
+            candidates.sort((a, b) => Math.abs(a.title.length - targetTitle.length) - Math.abs(b.title.length - targetTitle.length));
+            matchedNotice = candidates[0];
+          }
+        }
+      }
+
+      // If matched a specific quoted circular, return its detailed card
+      if (matchedNotice) {
+        const botAnswer = `### 📢 Official Circular: **${matchedNotice.title}**\n\n` +
+          `- **Target Batches:** **${matchedNotice.targetBatches?.join(', ') || 'All Batches'}**\n` +
+          `- **Category:** \`${(matchedNotice.category || 'general').toUpperCase()}\` • Priority: **${(matchedNotice.priority || 'normal').toUpperCase()}**\n` +
+          `- **Issued By:** **${matchedNotice.postedBy || 'University Administration'}**\n` +
+          `- **Date Published:** ${new Date(matchedNotice.createdAt).toLocaleDateString()}\n\n` +
+          `#### 📄 Circular Details:\n${matchedNotice.content}\n\n` +
+          `*This is an official administrative circular. For questions or exceptions, contact ${matchedNotice.postedBy || 'the Academic Office'}.*`;
+
+        const botMessage = {
+          sender: 'bot',
+          text: botAnswer,
+          confidence: 1.0,
+          sources: [`Official Notice Board: ${matchedNotice.title}`],
+          category: matchedNotice.category || 'notice',
+          latencyMs: 8,
+          personalizedFor: matchedNotice.targetBatches?.[0] || activeBatch,
+          timestamp: new Date()
+        };
+
+        const userMessage = { sender: 'user', text: query, timestamp: new Date() };
+
+        if (isAtlasConnected) {
+          try {
+            await ChatSession.findOneAndUpdate(
+              { sessionId },
+              { $push: { messages: { $each: [userMessage, botMessage] } }, $set: { updatedAt: new Date() } },
+              { upsert: true, new: true }
+            );
+          } catch (e) {}
+        }
+
+        return res.json({
+          success: true,
+          query,
+          batch: matchedNotice.targetBatches?.includes(activeBatch) ? activeBatch : (matchedNotice.targetBatches?.[0] || 'All'),
+          answer: botAnswer,
+          confidence: 1.0,
+          sources: [`Official Notice Board: ${matchedNotice.title}`],
+          category: matchedNotice.category || 'notice',
+          latencyMs: 8,
+          retrievalType: `Official Circular Match (${activeBatch})`,
+          matchedItem: matchedNotice
+        });
+      }
+
+      // Filter notices applicable to this student's batch
+      const batchNotices = (memoryNotices || []).filter(n => {
+        const tb = n.targetBatches || ['All'];
+        return tb.includes('All') || tb.includes(activeBatch);
+      });
+
+      // Subcase 2: Important & Urgent Notices Query (e.g. "import notices", "important notices", "urgent notices")
+      if (isUrgentOrImportantNoticeQuery) {
+        const urgentNotices = batchNotices.filter(n => {
+          const prio = (n.priority || '').toLowerCase();
+          return prio === 'urgent' || prio === 'important' || n.isPinned === true;
+        });
+
+        let botAnswer = '';
+        if (urgentNotices.length > 0) {
+          botAnswer = `### 🚨 Urgent & Important Circulars for **Batch ${activeBatch}**\n\n` +
+            `The following **${urgentNotices.length}** high-priority circular${urgentNotices.length > 1 ? 's are' : ' is'} currently active for your cohort:\n\n`;
+
+          urgentNotices.forEach((n, idx) => {
+            const isUrgent = (n.priority || '').toLowerCase() === 'urgent';
+            const badge = isUrgent ? '🔴 `[URGENT]`' : '🟡 `[IMPORTANT]`';
+            const pin = n.isPinned ? '📌 ' : '';
+            const dateStr = n.createdAt ? new Date(n.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : 'Recent';
+
+            botAnswer += `${idx + 1}. ${pin}${badge} **${n.title}**\n` +
+              `   - **Target Batches:** ${n.targetBatches?.join(', ') || 'All Batches'} • **Category:** \`${(n.category || 'General').toUpperCase()}\`\n` +
+              `   - **Published:** ${dateStr} • **Issued By:** ${n.postedBy || 'Administration'}\n` +
+              `   - **Action / Summary:** ${n.content}\n\n`;
+          });
+
+          botAnswer += `*Notice: Students of Batch ${activeBatch} must adhere strictly to the timelines and instructions specified above.*`;
+        } else {
+          botAnswer = `### 📋 Notice Board Status for **Batch ${activeBatch}**\n\n` +
+            `There are currently **no circulars flagged as urgent or important** for Batch **${activeBatch}**.\n\n` +
+            `All circulars are running under standard priority. You can ask *"What are latest notices?"* to see recent batch announcements.`;
+        }
+
+        const botMessage = {
+          sender: 'bot',
+          text: botAnswer,
+          confidence: 1.0,
+          sources: [`Notice Board [Urgent/Important for Batch ${activeBatch}]`],
+          category: 'urgent_notices',
+          latencyMs: 8,
+          personalizedFor: activeBatch,
+          timestamp: new Date()
+        };
+
+        const userMessage = { sender: 'user', text: query, timestamp: new Date() };
+
+        if (isAtlasConnected) {
+          try {
+            await ChatSession.findOneAndUpdate(
+              { sessionId },
+              { $push: { messages: { $each: [userMessage, botMessage] } }, $set: { updatedAt: new Date() } },
+              { upsert: true, new: true }
+            );
+          } catch (e) {}
+        }
+
+        return res.json({
+          success: true,
+          query,
+          batch: activeBatch,
+          answer: botAnswer,
+          confidence: 1.0,
+          sources: [`Notice Board [Urgent/Important for Batch ${activeBatch}]`],
+          category: 'urgent_notices',
+          latencyMs: 8,
+          retrievalType: `Urgent Circulars (${activeBatch})`
+        });
+      }
+
+      // Subcase 3: Latest / Recent Notices Query (e.g. "what are latest notices", "latest notices", "show notices")
+      if (isLatestNoticeQuery) {
+        const sortedNotices = [...batchNotices].sort((a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0)).slice(0, 5);
+
+        let botAnswer = '';
+        if (sortedNotices.length > 0) {
+          botAnswer = `### 📢 Latest Official Circulars for **Batch ${activeBatch}**\n\n` +
+            `Here are the **${sortedNotices.length}** most recent official circulars for your cohort:\n\n`;
+
+          sortedNotices.forEach((n, idx) => {
+            const isUrgent = (n.priority || '').toLowerCase() === 'urgent';
+            const isImportant = (n.priority || '').toLowerCase() === 'important';
+            const badge = isUrgent ? '🔴 `[URGENT]` ' : (isImportant ? '🟡 `[IMPORTANT]` ' : '');
+            const pin = n.isPinned ? '📌 ' : '';
+            const dateStr = n.createdAt ? new Date(n.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : 'Recent';
+
+            botAnswer += `${idx + 1}. ${pin}${badge}**${n.title}**\n` +
+              `   - **Category:** \`${(n.category || 'General').toUpperCase()}\` • **Date:** ${dateStr}\n` +
+              `   - **Issued By:** ${n.postedBy || 'Administration'}\n` +
+              `   - **Details:** ${n.content}\n\n`;
+          });
+
+          botAnswer += `*Official administrative notices for RGUKT RK Valley. You can ask about any specific circular title for more information.*`;
+        } else {
+          botAnswer = `### 📢 Latest Circulars for **Batch ${activeBatch}**\n\n` +
+            `No active circulars found for Batch **${activeBatch}** at this moment. Please check back later.`;
+        }
+
+        const botMessage = {
+          sender: 'bot',
+          text: botAnswer,
+          confidence: 1.0,
+          sources: [`Notice Board [Latest Circulars for Batch ${activeBatch}]`],
+          category: 'latest_notices',
+          latencyMs: 8,
+          personalizedFor: activeBatch,
+          timestamp: new Date()
+        };
+
+        const userMessage = { sender: 'user', text: query, timestamp: new Date() };
+
+        if (isAtlasConnected) {
+          try {
+            await ChatSession.findOneAndUpdate(
+              { sessionId },
+              { $push: { messages: { $each: [userMessage, botMessage] } }, $set: { updatedAt: new Date() } },
+              { upsert: true, new: true }
+            );
+          } catch (e) {}
+        }
+
+        return res.json({
+          success: true,
+          query,
+          batch: activeBatch,
+          answer: botAnswer,
+          confidence: 1.0,
+          sources: [`Notice Board [Latest Circulars for Batch ${activeBatch}]`],
+          category: 'latest_notices',
+          latencyMs: 8,
+          retrievalType: `Latest Circulars (${activeBatch})`
+        });
+      }
+
+      // Subcase 4: Specific notice title matched without quotes (e.g. "tell me about holidays circular")
       if (memoryNotices && memoryNotices.length > 0) {
-        if (quotedMatch) {
-          const targetTitle = quotedMatch[1].trim().toLowerCase();
-          // 1. Exact match with quoted title
-          matchedNotice = memoryNotices.find(n => n.title.trim().toLowerCase() === targetTitle);
-          // 2. If not exact, find the closest matching title
-          if (!matchedNotice) {
-            const candidates = memoryNotices.filter(n => {
-              const nt = n.title.trim().toLowerCase();
-              return nt.includes(targetTitle) || targetTitle.includes(nt);
-            });
-            if (candidates.length > 0) {
-              candidates.sort((a, b) => Math.abs(a.title.length - targetTitle.length) - Math.abs(b.title.length - targetTitle.length));
-              matchedNotice = candidates[0];
-            }
-          }
+        const titleMatches = memoryNotices.filter(n => lowerQuery.includes(n.title.trim().toLowerCase()));
+        if (titleMatches.length > 0) {
+          titleMatches.sort((a, b) => b.title.length - a.title.length);
+          matchedNotice = titleMatches[0];
         }
+      }
 
-        // If no quoted match or not found yet, search by longest title match in lowerQuery
-        if (!matchedNotice) {
-          const titleMatches = memoryNotices.filter(n => lowerQuery.includes(n.title.trim().toLowerCase()));
-          if (titleMatches.length > 0) {
-            // Sort by longest title so specific titles win over short 1-word titles like "holidays"
-            titleMatches.sort((a, b) => b.title.length - a.title.length);
-            matchedNotice = titleMatches[0];
-          }
-        }
-
-        // 3. Keyword overlap match if direct title not found
-        if (!matchedNotice) {
-          let maxScore = 0;
-          for (const n of memoryNotices) {
-            const nTokens = (n.title + ' ' + n.content).toLowerCase().split(/\W+/).filter(w => w.length > 2);
-            const qTokens = lowerQuery.split(/\W+/).filter(w => w.length > 2 && !['tell', 'more', 'details', 'about', 'the', 'circular', 'notice'].includes(w));
-            const overlap = qTokens.filter(t => nTokens.includes(t)).length;
-            if (overlap > maxScore) {
-              maxScore = overlap;
-              matchedNotice = n;
-            }
+      // Keyword overlap match if direct title not found
+      if (!matchedNotice && memoryNotices && memoryNotices.length > 0) {
+        let maxScore = 0;
+        for (const n of memoryNotices) {
+          const nTokens = (n.title + ' ' + n.content).toLowerCase().split(/\W+/).filter(w => w.length > 2);
+          const qTokens = lowerQuery.split(/\W+/).filter(w => w.length > 2 && !['tell', 'more', 'details', 'about', 'the', 'circular', 'notice'].includes(w));
+          const overlap = qTokens.filter(t => nTokens.includes(t)).length;
+          if (overlap > maxScore) {
+            maxScore = overlap;
+            matchedNotice = n;
           }
         }
       }
@@ -593,7 +794,7 @@ app.post('/api/chat', async (req, res) => {
           sources: [`Official Notice Board: ${matchedNotice.title}`],
           category: matchedNotice.category || 'notice',
           latencyMs: 8,
-          personalizedFor: matchedNotice.targetBatches?.[0] || batch,
+          personalizedFor: matchedNotice.targetBatches?.[0] || activeBatch,
           timestamp: new Date()
         };
 
@@ -612,13 +813,13 @@ app.post('/api/chat', async (req, res) => {
         return res.json({
           success: true,
           query,
-          batch: matchedNotice.targetBatches?.includes(batch) ? batch : (matchedNotice.targetBatches?.[0] || 'All'),
+          batch: matchedNotice.targetBatches?.includes(activeBatch) ? activeBatch : (matchedNotice.targetBatches?.[0] || 'All'),
           answer: botAnswer,
           confidence: 1.0,
           sources: [`Official Notice Board: ${matchedNotice.title}`],
           category: matchedNotice.category || 'notice',
           latencyMs: 8,
-          retrievalType: `Official Circular Match (${batch})`,
+          retrievalType: `Official Circular Match (${activeBatch})`,
           matchedItem: matchedNotice
         });
       }
@@ -657,88 +858,78 @@ app.post('/api/chat', async (req, res) => {
         const attendanceNum = parseInt(student.attendance) || 85;
         const isEligible = attendanceNum >= 75;
 
-        // 1. Name query
-        if (/\b(name|who am i|who i am|whoami|identity|called)\b/i.test(lowerQuery)) {
-          category = 'student_name';
-          answerText = `### 👤 Student Profile & Identity\n\n` +
-            `- **Full Name:** **${student.name}**\n` +
-            `- **Student ID / Roll No:** **\`${student.id}\`**\n` +
-            `- **Batch:** **${student.batch}**\n` +
-            `- **Department:** ${student.department || 'Computer Science & Engineering'}\n` +
-            `- **Semester:** ${student.semester || 'Semester VII'}\n` +
-            `- **Official Email:** \`${student.email}\`\n` +
-            `- **Assigned Faculty Advisor:** **${student.advisor}**\n\n` +
-            `*Verified against college database records for ID \`${student.id}\`.*`;
-        }
-        // 2. ID / Roll Number query
-        else if (/\b(id|roll|rollno|id number|roll number|student id|roll no)\b/i.test(lowerQuery)) {
-          category = 'student_id';
-          answerText = `### 🪪 Student Identification & Roll Number\n\n` +
-            `- **Student ID / Roll Number:** **\`${student.id}\`**\n` +
-            `- **Full Name:** **${student.name}**\n` +
-            `- **Academic Batch:** **${student.batch}** (${student.semester || 'Semester VII'})\n` +
-            `- **Department:** ${student.department || 'Computer Science & Engineering'}\n` +
-            `- **Section:** \`${student.section || 'Section A'}\`\n` +
-            `- **Official Email:** \`${student.email}\`\n\n` +
-            `*Record fetched live from MongoDB database.*`;
-        }
-        // 3. Email query
-        else if (/\b(email|mail|inbox)\b/i.test(lowerQuery)) {
-          category = 'student_email';
-          answerText = `### 📧 Student Institutional Email\n\n` +
-            `- **Official Institutional Email:** **\`${student.email}\`**\n` +
-            `- **Student ID:** **\`${student.id}\`**\n` +
-            `- **Student Name:** **${student.name}**\n` +
-            `- **Batch:** **${student.batch}**\n\n` +
-            `*All official university notifications, exam schedules, and placement circulars are sent to this address.*`;
-        }
-        // 4. Attendance query
-        else if (/attendance|present|absent|shortage|condonation|eligib|classes attended|hall ticket/i.test(lowerQuery)) {
+        // 1. Attendance query: Returns ONLY attendance percentage and examination eligibility!
+        if (/attendance|present|absent|shortage|condonation|eligib|classes\s*attended|bunk/i.test(lowerQuery)) {
           category = 'attendance';
           answerText = `### 📊 Live Attendance Record for **${student.name}** (\`${student.id}\`)\n\n` +
             `- **Current Attendance:** **\`${student.attendance}\`**\n` +
-            `- **Examination Eligibility:** **${isEligible ? '✅ Eligible for End-Semester Examinations' : '⚠️ Shortage Warning (Condonation Required)'}**\n` +
-            `- **Batch & Section:** **${student.batch}** • Section \`${student.section || 'Standard'}\`\n` +
-            `- **Assigned Faculty Advisor:** **${student.advisor}**\n` +
-            `- **Hostel Room:** **${student.hostelRoom}**\n\n` +
+            `- **Examination Eligibility:** **${isEligible ? '✅ Eligible for End-Semester Examinations' : '⚠️ Attendance Shortage Warning (Condonation Required)'}**\n\n` +
             `*Institutional Rule: A minimum of 75% attendance across theory and lab sessions is required to write university examinations.*`;
         }
-        // 5. CGPA / Marks / Academic performance
-        else if (/cgpa|gpa|grade|marks|score|rank|academic performance|standing/i.test(lowerQuery)) {
+        // 2. CGPA / Marks / Academic performance query: Returns ONLY CGPA and standing!
+        else if (/cgpa|gpa|grade|marks|score|rank|academic\s*performance|standing/i.test(lowerQuery)) {
           category = 'academic_performance';
+          const cgpaNum = parseFloat(student.cgpa) || 8.0;
+          const standing = cgpaNum >= 8.0 ? 'First Class with Distinction' : (cgpaNum >= 6.5 ? 'First Class' : 'Second Class');
           answerText = `### 🏆 Academic Performance for **${student.name}** (\`${student.id}\`)\n\n` +
             `- **Cumulative GPA (CGPA):** **\`${student.cgpa}\` / 10.00**\n` +
-            `- **Academic Standing:** **First Class with Distinction**\n` +
-            `- **Enrolled Degree:** ${student.degree || student.department}\n` +
-            `- **Current Batch & Semester:** **${student.batch}** • ${student.semester || 'Semester VII'}\n` +
-            `- **Assigned Faculty Mentor:** **${student.advisor}**\n` +
-            `- **Course Attendance:** \`${student.attendance}\`\n\n` +
+            `- **Academic Standing:** **${standing}**\n\n` +
             `*Records verified against MongoDB Atlas \`students_data\` collection.*`;
         }
-        // 6. Advisor / Mentor query
-        else if (/advisor|mentor|counselor|faculty mentor|faculty advisor|guide/i.test(lowerQuery)) {
+        // 3. Faculty Advisor / Mentor query: Returns ONLY assigned advisor!
+        else if (/advisor|mentor|counselor|faculty\s*mentor|faculty\s*advisor|guide/i.test(lowerQuery)) {
           category = 'advisor';
-          answerText = `### 👨‍🏫 Faculty Advisor Details for **${student.name}** (\`${student.id}\`)\n\n` +
-            `- **Assigned Faculty Advisor / Mentor:** **\`${student.advisor}\`**\n` +
+          answerText = `### 👨‍🏫 Faculty Advisor for **${student.name}** (\`${student.id}\`)\n\n` +
+            `- **Assigned Faculty Advisor:** **\`${student.advisor}\`**\n` +
             `- **Department:** ${student.department || 'Computer Science & Engineering'}\n` +
-            `- **Student Cohort:** Batch **${student.batch}** (${student.section || 'All Sections'})\n` +
             `- **Cabin / Office:** Faculty Chambers, Academic Administrative Block\n` +
-            `- **Mentoring & Consultation Hours:** Monday to Friday, 03:30 PM – 04:30 PM\n\n` +
+            `- **Consultation Hours:** Monday to Friday, 03:30 PM – 04:30 PM\n\n` +
             `*You can consult **${student.advisor}** for course registration, lab permissions, on-duty approvals, and academic guidance.*`;
         }
-        // 7. Hostel / Room query
+        // 4. Hostel / Room query: Returns ONLY allocated room and curfew!
         else if (/hostel|room|gh2|bh2|curfew|accommodation|warden/i.test(lowerQuery)) {
           category = 'hostel';
           const isGH2 = student.gender === 'Female' || student.hostelRoom?.includes('GH2');
           answerText = `### 🏠 Hostel Room Allocation for **${student.name}** (\`${student.id}\`)\n\n` +
             `- **Allocated Room:** **\`${student.hostelRoom}\`**\n` +
             `- **Hostel Complex:** **${isGH2 ? 'GH2 (Girls Hostel 2)' : 'BH2 (Boys Hostel 2)'}**\n` +
-            `- **Gate Curfew Timing:** **08:30 PM** (Biometric attendance check-in mandatory)\n` +
-            `- **Assigned Faculty Advisor:** **${student.advisor}**\n` +
-            `- **Resident Status:** Active Resident Scholar\n\n` +
-            `*For room maintenance requests or weekend leave out-passes, obtain digital sanction from ${student.advisor} and the resident warden.*`;
+            `- **Gate Curfew Timing:** **08:30 PM** (Biometric attendance check-in mandatory)\n\n` +
+            `*For room maintenance requests or weekend leave out-passes, consult the resident warden.*`;
         }
-        // 8. General profile / details inquiry
+        // 5. Email query: Returns ONLY email!
+        else if (/email|mail|inbox/i.test(lowerQuery)) {
+          category = 'student_email';
+          answerText = `### 📧 Student Institutional Email for **${student.name}**\n\n` +
+            `- **Official Institutional Email:** **\`${student.email}\`**\n` +
+            `- **Student ID:** **\`${student.id}\`**\n\n` +
+            `*All official university notifications, exam schedules, and placement circulars are sent to this address.*`;
+        }
+        // 6. ID / Roll Number query: Returns ONLY ID and name!
+        else if (/(^|\b)(id|roll|rollno|id\s*number|roll\s*number|student\s*id|roll\s*no)(\b|$)/i.test(lowerQuery)) {
+          category = 'student_id';
+          answerText = `### 🪪 Student Identification & Roll Number\n\n` +
+            `- **Student ID / Roll Number:** **\`${student.id}\`**\n` +
+            `- **Registered Name:** **${student.name}**\n\n` +
+            `*Record fetched live from MongoDB Atlas database.*`;
+        }
+        // 7. Name query: Returns ONLY name and ID!
+        else if (/(^|\b)(what\s*(is|\'s)\s*my\s*name|my\s*name|name\s*is)(\b|$)/i.test(lowerQuery)) {
+          category = 'student_name';
+          answerText = `### 👤 Registered Student Name\n\n` +
+            `- **Full Name:** **${student.name}**\n` +
+            `- **Student ID / Roll No:** **\`${student.id}\`**\n\n` +
+            `*Verified against university student enrollment records.*`;
+        }
+        // 8. Section / Branch / Department query: Returns ONLY section and branch!
+        else if (/(^|\b)(section|branch|department|dept|classroom)(\b|$)/i.test(lowerQuery)) {
+          category = 'student_record';
+          answerText = `### 📚 Academic Branch & Class Section for **${student.name}** (\`${student.id}\`)\n\n` +
+            `- **Batch & Year:** **${student.batch}** (${student.semester || 'Semester VII'})\n` +
+            `- **Department / Branch:** **${student.department || 'Computer Science & Engineering'}**\n` +
+            `- **Classroom / Section:** \`${student.section || 'AB1-T05'}\`\n\n` +
+            `*Assigned academic classroom and section records.*`;
+        }
+        // 9. General profile / details inquiry: Full profile table reserved for "my details", "profile", "who am i", etc.
         else {
           category = 'student_record';
           answerText = `### 🎓 Student Profile & Academic Details for **${student.name}**\n\n` +
