@@ -1110,7 +1110,13 @@
       "advisor": "Dr. Shanthi Victoria",
       "hostelRoom": "Campus Hostel Block",
       "createdAt": "2026-11-12T02:39:55.776Z",
-      "_id": "local_u_1794451195776"
+      "_id": "local_u_1794451195776",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "RTC-2024-E2-55",
@@ -1311,7 +1317,13 @@
       "phone": "+91 98421 40473",
       "password": "password123",
       "avatar": "MS",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 16000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210394",
@@ -1331,7 +1343,13 @@
       "phone": "+91 98421 42454",
       "password": "password123",
       "avatar": "KP",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 8000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210028",
@@ -1351,7 +1369,13 @@
       "phone": "+91 98421 39358",
       "password": "password123",
       "avatar": "GN",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210501",
@@ -1371,7 +1395,13 @@
       "phone": "+91 98421 44094",
       "password": "password123",
       "avatar": "CB",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210091",
@@ -1391,7 +1421,13 @@
       "phone": "+91 98421 39568",
       "password": "password123",
       "avatar": "GS",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210002",
@@ -1411,7 +1447,13 @@
       "phone": "+91 98421 39290",
       "password": "password123",
       "avatar": "KS",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210182",
@@ -1431,7 +1473,13 @@
       "phone": "+91 98421 40499",
       "password": "password123",
       "avatar": "KG",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210274",
@@ -1451,7 +1499,13 @@
       "phone": "+91 98421 41431",
       "password": "password123",
       "avatar": "MS",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 5000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210155",
@@ -1471,7 +1525,13 @@
       "phone": "+91 98421 40409",
       "password": "password123",
       "avatar": "BS",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 3000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210562",
@@ -1491,7 +1551,13 @@
       "phone": "+91 98421 44281",
       "password": "password123",
       "avatar": "PC",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210804",
@@ -1511,7 +1577,13 @@
       "phone": "+91 98421 46980",
       "password": "password123",
       "avatar": "BT",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 4000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211059",
@@ -1531,7 +1603,13 @@
       "phone": "+91 98421 69243",
       "password": "password123",
       "avatar": "JS",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210269",
@@ -1551,7 +1629,13 @@
       "phone": "+91 98421 41405",
       "password": "password123",
       "avatar": "ND",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210297",
@@ -1571,7 +1655,13 @@
       "phone": "+91 98421 41496",
       "password": "password123",
       "avatar": "MP",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 28000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210393",
@@ -1591,7 +1681,13 @@
       "phone": "+91 98421 42453",
       "password": "password123",
       "avatar": "RG",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210348",
@@ -1611,7 +1707,13 @@
       "phone": "+91 98421 42303",
       "password": "password123",
       "avatar": "PK",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210542",
@@ -1631,7 +1733,13 @@
       "phone": "+91 98421 44219",
       "password": "password123",
       "avatar": "KB",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210402",
@@ -1651,7 +1759,13 @@
       "phone": "+91 98421 43134",
       "password": "password123",
       "avatar": "PH",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210914",
@@ -1671,7 +1785,13 @@
       "phone": "+91 98421 47972",
       "password": "password123",
       "avatar": "AB",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 6000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210865",
@@ -1691,7 +1811,13 @@
       "phone": "+91 98421 47167",
       "password": "password123",
       "avatar": "BG",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 2000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R200055",
@@ -1711,7 +1837,13 @@
       "phone": "+91 98421 15917",
       "password": "password123",
       "avatar": "MY",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 2000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210568",
@@ -1731,7 +1863,13 @@
       "phone": "+91 98421 44287",
       "password": "password123",
       "avatar": "PS",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210329",
@@ -1751,7 +1889,13 @@
       "phone": "+91 98421 42242",
       "password": "password123",
       "avatar": "NL",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210445",
@@ -1771,7 +1915,13 @@
       "phone": "+91 98421 43261",
       "password": "password123",
       "avatar": "GR",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 5000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "O210284",
@@ -1791,7 +1941,13 @@
       "phone": "+91 98421 49164",
       "password": "password123",
       "avatar": "MV",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 6000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210520",
@@ -1811,7 +1967,13 @@
       "phone": "+91 98421 44155",
       "password": "password123",
       "avatar": "SS",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210038",
@@ -1831,7 +1993,13 @@
       "phone": "+91 98421 39389",
       "password": "password123",
       "avatar": "JL",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210475",
@@ -1851,7 +2019,13 @@
       "phone": "+91 98421 43354",
       "password": "password123",
       "avatar": "GD",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 8000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210505",
@@ -1871,7 +2045,13 @@
       "phone": "+91 98421 44098",
       "password": "password123",
       "avatar": "DD",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 2000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210290",
@@ -1891,7 +2071,13 @@
       "phone": "+91 98421 41489",
       "password": "password123",
       "avatar": "AS",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210494",
@@ -1911,7 +2097,13 @@
       "phone": "+91 98421 43415",
       "password": "password123",
       "avatar": "KA",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 9000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210969",
@@ -1931,7 +2123,13 @@
       "phone": "+91 98421 48132",
       "password": "password123",
       "avatar": "GK",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210427",
@@ -1951,7 +2149,13 @@
       "phone": "+91 98421 43201",
       "password": "password123",
       "avatar": "MM",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 50000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210948",
@@ -1971,7 +2175,13 @@
       "phone": "+91 98421 48069",
       "password": "password123",
       "avatar": "ON",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210711",
@@ -1991,7 +2201,13 @@
       "phone": "+91 98421 46047",
       "password": "password123",
       "avatar": "TR",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210945",
@@ -2011,7 +2227,13 @@
       "phone": "+91 98421 48066",
       "password": "password123",
       "avatar": "DM",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 1000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211022",
@@ -2031,7 +2253,13 @@
       "phone": "+91 98421 69143",
       "password": "password123",
       "avatar": "TD",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210928",
@@ -2051,7 +2279,13 @@
       "phone": "+91 98421 48007",
       "password": "password123",
       "avatar": "AK",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210137",
@@ -2071,7 +2305,13 @@
       "phone": "+91 98421 40349",
       "password": "password123",
       "avatar": "PS",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 30000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210544",
@@ -2091,7 +2331,13 @@
       "phone": "+91 98421 44221",
       "password": "password123",
       "avatar": "AS",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 5000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210598",
@@ -2111,7 +2357,13 @@
       "phone": "+91 98421 44380",
       "password": "password123",
       "avatar": "SJ",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210583",
@@ -2131,7 +2383,13 @@
       "phone": "+91 98421 44344",
       "password": "password123",
       "avatar": "SA",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210053",
@@ -2151,7 +2409,13 @@
       "phone": "+91 98421 39446",
       "password": "password123",
       "avatar": "MJ",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210191",
@@ -2171,7 +2435,13 @@
       "phone": "+91 98421 40529",
       "password": "password123",
       "avatar": "KV",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210712",
@@ -2191,7 +2461,13 @@
       "phone": "+91 98421 46048",
       "password": "password123",
       "avatar": "MJ",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210341",
@@ -2211,7 +2487,13 @@
       "phone": "+91 98421 42296",
       "password": "password123",
       "avatar": "SM",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210464",
@@ -2231,7 +2513,13 @@
       "phone": "+91 98421 43322",
       "password": "password123",
       "avatar": "KK",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 6000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210111",
@@ -2251,7 +2539,13 @@
       "phone": "+91 98421 40281",
       "password": "password123",
       "avatar": "BV",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210878",
@@ -2271,7 +2565,13 @@
       "phone": "+91 98421 47201",
       "password": "password123",
       "avatar": "NS",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210560",
@@ -2291,7 +2591,13 @@
       "phone": "+91 98421 44279",
       "password": "password123",
       "avatar": "GP",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210092",
@@ -2311,7 +2617,13 @@
       "phone": "+91 98421 39569",
       "password": "password123",
       "avatar": "CV",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210496",
@@ -2331,7 +2643,13 @@
       "phone": "+91 98421 43417",
       "password": "password123",
       "avatar": "YK",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 11000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210266",
@@ -2351,7 +2669,13 @@
       "phone": "+91 98421 41402",
       "password": "password123",
       "avatar": "CR",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 51000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210166",
@@ -2371,7 +2695,13 @@
       "phone": "+91 98421 40441",
       "password": "password123",
       "avatar": "SG",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 5000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210731",
@@ -2391,7 +2721,13 @@
       "phone": "+91 98421 46109",
       "password": "password123",
       "avatar": "PB",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210389",
@@ -2411,7 +2747,13 @@
       "phone": "+91 98421 42428",
       "password": "password123",
       "avatar": "KB",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210058",
@@ -2431,7 +2773,13 @@
       "phone": "+91 98421 39451",
       "password": "password123",
       "avatar": "KT",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210130",
@@ -2451,7 +2799,13 @@
       "phone": "+91 98421 40342",
       "password": "password123",
       "avatar": "KD",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210412",
@@ -2471,7 +2825,13 @@
       "phone": "+91 98421 43165",
       "password": "password123",
       "avatar": "BC",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210327",
@@ -2491,7 +2851,13 @@
       "phone": "+91 98421 42240",
       "password": "password123",
       "avatar": "VJ",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 4000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210669",
@@ -2511,7 +2877,13 @@
       "phone": "+91 98421 45249",
       "password": "password123",
       "avatar": "KP",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210561",
@@ -2531,7 +2903,13 @@
       "phone": "+91 98421 44280",
       "password": "password123",
       "avatar": "MV",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210063",
@@ -2551,7 +2929,13 @@
       "phone": "+91 98421 39477",
       "password": "password123",
       "avatar": "TS",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210549",
@@ -2571,7 +2955,13 @@
       "phone": "+91 98421 44226",
       "password": "password123",
       "avatar": "PP",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210915",
@@ -2591,7 +2981,13 @@
       "phone": "+91 98421 47973",
       "password": "password123",
       "avatar": "GM",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 7000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211052",
@@ -2611,7 +3007,13 @@
       "phone": "+91 98421 69236",
       "password": "password123",
       "avatar": "RB",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210897",
@@ -2631,7 +3033,13 @@
       "phone": "+91 98421 47262",
       "password": "password123",
       "avatar": "SS",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 34000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210920",
@@ -2651,7 +3059,13 @@
       "phone": "+91 98421 47999",
       "password": "password123",
       "avatar": "SS",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210593",
@@ -2671,7 +3085,13 @@
       "phone": "+91 98421 44375",
       "password": "password123",
       "avatar": "SS",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211095",
@@ -2691,7 +3111,13 @@
       "phone": "+91 98421 69363",
       "password": "password123",
       "avatar": "BY",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 6000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211019",
@@ -2711,7 +3137,13 @@
       "phone": "+91 98421 69119",
       "password": "password123",
       "avatar": "NV",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211014",
@@ -2731,7 +3163,13 @@
       "phone": "+91 98421 69114",
       "password": "password123",
       "avatar": "KA",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 6000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211077",
@@ -2751,7 +3189,13 @@
       "phone": "+91 98421 69303",
       "password": "password123",
       "avatar": "YV",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 24000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210178",
@@ -2771,7 +3215,13 @@
       "phone": "+91 98421 40474",
       "password": "password123",
       "avatar": "MG",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210672",
@@ -2791,7 +3241,13 @@
       "phone": "+91 98421 45273",
       "password": "password123",
       "avatar": "GN",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210205",
@@ -2811,7 +3267,13 @@
       "phone": "+91 98421 41215",
       "password": "password123",
       "avatar": "TR",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 8000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210076",
@@ -2831,7 +3293,13 @@
       "phone": "+91 98421 39511",
       "password": "password123",
       "avatar": "VL",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 23000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210734",
@@ -2851,7 +3319,13 @@
       "phone": "+91 98421 46112",
       "password": "password123",
       "avatar": "PS",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 6000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210332",
@@ -2871,7 +3345,13 @@
       "phone": "+91 98421 42266",
       "password": "password123",
       "avatar": "NM",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210246",
@@ -2891,7 +3371,13 @@
       "phone": "+91 98421 41340",
       "password": "password123",
       "avatar": "KV",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 31000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210618",
@@ -2911,7 +3397,13 @@
       "phone": "+91 98421 45093",
       "password": "password123",
       "avatar": "UN",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210163",
@@ -2931,7 +3423,13 @@
       "phone": "+91 98421 40438",
       "password": "password123",
       "avatar": "PP",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211038",
@@ -2951,7 +3449,13 @@
       "phone": "+91 98421 69180",
       "password": "password123",
       "avatar": "MS",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210203",
@@ -2971,7 +3475,13 @@
       "phone": "+91 98421 41213",
       "password": "password123",
       "avatar": "NH",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211072",
@@ -2991,7 +3501,13 @@
       "phone": "+91 98421 69298",
       "password": "password123",
       "avatar": "DL",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210244",
@@ -3011,7 +3527,13 @@
       "phone": "+91 98421 41338",
       "password": "password123",
       "avatar": "BM",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 2000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210713",
@@ -3031,7 +3553,13 @@
       "phone": "+91 98421 46049",
       "password": "password123",
       "avatar": "GS",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210462",
@@ -3051,7 +3579,13 @@
       "phone": "+91 98421 43320",
       "password": "password123",
       "avatar": "MS",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210026",
@@ -3071,7 +3605,13 @@
       "phone": "+91 98421 39356",
       "password": "password123",
       "avatar": "CG",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 27000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210334",
@@ -3091,7 +3631,13 @@
       "phone": "+91 98421 42268",
       "password": "password123",
       "avatar": "NH",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 2000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210843",
@@ -3111,7 +3657,13 @@
       "phone": "+91 98421 47103",
       "password": "password123",
       "avatar": "VV",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210581",
@@ -3131,7 +3683,13 @@
       "phone": "+91 98421 44342",
       "password": "password123",
       "avatar": "SA",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210723",
@@ -3151,7 +3709,13 @@
       "phone": "+91 98421 46080",
       "password": "password123",
       "avatar": "MM",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210851",
@@ -3171,7 +3735,13 @@
       "phone": "+91 98421 47132",
       "password": "password123",
       "avatar": "CR",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210267",
@@ -3191,7 +3761,13 @@
       "phone": "+91 98421 41403",
       "password": "password123",
       "avatar": "TV",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 52000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210184",
@@ -3211,7 +3787,13 @@
       "phone": "+91 98421 40501",
       "password": "password123",
       "avatar": "DS",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 5000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210032",
@@ -3231,7 +3813,13 @@
       "phone": "+91 98421 39383",
       "password": "password123",
       "avatar": "CV",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210665",
@@ -3251,7 +3839,13 @@
       "phone": "+91 98421 45245",
       "password": "password123",
       "avatar": "DV",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 9000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210585",
@@ -3271,7 +3865,13 @@
       "phone": "+91 98421 44346",
       "password": "password123",
       "avatar": "CM",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 1000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210826",
@@ -3291,7 +3891,13 @@
       "phone": "+91 98421 47044",
       "password": "password123",
       "avatar": "DP",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 17000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210310",
@@ -3311,7 +3917,13 @@
       "phone": "+91 98421 42202",
       "password": "password123",
       "avatar": "TV",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210534",
@@ -3331,7 +3943,13 @@
       "phone": "+91 98421 44190",
       "password": "password123",
       "avatar": "KM",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 4000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210910",
@@ -3351,7 +3969,13 @@
       "phone": "+91 98421 47968",
       "password": "password123",
       "avatar": "VP",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210335",
@@ -3371,7 +3995,13 @@
       "phone": "+91 98421 42269",
       "password": "password123",
       "avatar": "PH",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 3000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210606",
@@ -3391,7 +4021,13 @@
       "phone": "+91 98421 45060",
       "password": "password123",
       "avatar": "SN",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 13000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210374",
@@ -3411,7 +4047,13 @@
       "phone": "+91 98421 42392",
       "password": "password123",
       "avatar": "EG",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 6000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210892",
@@ -3431,7 +4073,13 @@
       "phone": "+91 98421 47257",
       "password": "password123",
       "avatar": "SS",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210471",
@@ -3451,7 +4099,13 @@
       "phone": "+91 98421 43350",
       "password": "password123",
       "avatar": "SV",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211062",
@@ -3471,7 +4125,13 @@
       "phone": "+91 98421 69267",
       "password": "password123",
       "avatar": "KS",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210873",
@@ -3491,7 +4151,13 @@
       "phone": "+91 98421 47196",
       "password": "password123",
       "avatar": "KS",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211084",
@@ -3511,7 +4177,13 @@
       "phone": "+91 98421 69331",
       "password": "password123",
       "avatar": "PA",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 4000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210152",
@@ -3531,7 +4203,13 @@
       "phone": "+91 98421 40406",
       "password": "password123",
       "avatar": "CS",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210343",
@@ -3551,7 +4229,13 @@
       "phone": "+91 98421 42298",
       "password": "password123",
       "avatar": "YK",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210428",
@@ -3571,7 +4255,13 @@
       "phone": "+91 98421 43202",
       "password": "password123",
       "avatar": "GA",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210497",
@@ -3591,7 +4281,13 @@
       "phone": "+91 98421 43418",
       "password": "password123",
       "avatar": "KT",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 12000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210313",
@@ -3611,7 +4307,13 @@
       "phone": "+91 98421 42205",
       "password": "password123",
       "avatar": "SM",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210284",
@@ -3631,7 +4333,13 @@
       "phone": "+91 98421 41462",
       "password": "password123",
       "avatar": "KS",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 6000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210287",
@@ -3651,7 +4359,13 @@
       "phone": "+91 98421 41465",
       "password": "password123",
       "avatar": "KP",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 18000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210072",
@@ -3671,7 +4385,13 @@
       "phone": "+91 98421 39507",
       "password": "password123",
       "avatar": "SV",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210240",
@@ -3691,7 +4411,13 @@
       "phone": "+91 98421 41334",
       "password": "password123",
       "avatar": "MN",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210113",
@@ -3711,7 +4437,13 @@
       "phone": "+91 98421 40283",
       "password": "password123",
       "avatar": "KC",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210060",
@@ -3731,7 +4463,13 @@
       "phone": "+91 98421 39474",
       "password": "password123",
       "avatar": "LJ",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210326",
@@ -3751,7 +4489,13 @@
       "phone": "+91 98421 42239",
       "password": "password123",
       "avatar": "MS",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 3000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210339",
@@ -3771,7 +4515,13 @@
       "phone": "+91 98421 42273",
       "password": "password123",
       "avatar": "TV",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210217",
@@ -3791,7 +4541,13 @@
       "phone": "+91 98421 41248",
       "password": "password123",
       "avatar": "KA",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 2000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210311",
@@ -3811,7 +4567,13 @@
       "phone": "+91 98421 42203",
       "password": "password123",
       "avatar": "YA",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211039",
@@ -3831,7 +4593,13 @@
       "phone": "+91 98421 69181",
       "password": "password123",
       "avatar": "PS",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210288",
@@ -3851,7 +4619,13 @@
       "phone": "+91 98421 41466",
       "password": "password123",
       "avatar": "MU",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210237",
@@ -3871,7 +4645,13 @@
       "phone": "+91 98421 41310",
       "password": "password123",
       "avatar": "PV",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 22000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210874",
@@ -3891,7 +4671,13 @@
       "phone": "+91 98421 47197",
       "password": "password123",
       "avatar": "DB",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 2000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210530",
@@ -3911,7 +4697,13 @@
       "phone": "+91 98421 44186",
       "password": "password123",
       "avatar": "GV",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210473",
@@ -3931,7 +4723,13 @@
       "phone": "+91 98421 43352",
       "password": "password123",
       "avatar": "NP",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210210",
@@ -3951,7 +4749,13 @@
       "phone": "+91 98421 41241",
       "password": "password123",
       "avatar": "BV",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210546",
@@ -3971,7 +4775,13 @@
       "phone": "+91 98421 44223",
       "password": "password123",
       "avatar": "AK",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 7000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210701",
@@ -3991,7 +4801,13 @@
       "phone": "+91 98421 46016",
       "password": "password123",
       "avatar": "KV",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210354",
@@ -4011,7 +4827,13 @@
       "phone": "+91 98421 42330",
       "password": "password123",
       "avatar": "SW",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 4000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210989",
@@ -4031,7 +4853,13 @@
       "phone": "+91 98421 48194",
       "password": "password123",
       "avatar": "YA",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210487",
@@ -4051,7 +4879,13 @@
       "phone": "+91 98421 43387",
       "password": "password123",
       "avatar": "BA",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 2000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210815",
@@ -4071,7 +4905,13 @@
       "phone": "+91 98421 47012",
       "password": "password123",
       "avatar": "SM",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 6000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210373",
@@ -4091,7 +4931,13 @@
       "phone": "+91 98421 42391",
       "password": "password123",
       "avatar": "KM",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210977",
@@ -4111,7 +4957,13 @@
       "phone": "+91 98421 48161",
       "password": "password123",
       "avatar": "BS",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 6000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210939",
@@ -4131,7 +4983,13 @@
       "phone": "+91 98421 48039",
       "password": "password123",
       "avatar": "KH",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210248",
@@ -4151,7 +5009,13 @@
       "phone": "+91 98421 41342",
       "password": "password123",
       "avatar": "CA",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211046",
@@ -4171,7 +5035,13 @@
       "phone": "+91 98421 69209",
       "password": "password123",
       "avatar": "CH",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 47000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211047",
@@ -4191,7 +5061,13 @@
       "phone": "+91 98421 69210",
       "password": "password123",
       "avatar": "VP",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 48000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R201052",
@@ -4211,7 +5087,13 @@
       "phone": "+91 98421 45705",
       "password": "password123",
       "avatar": "VN",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210108",
@@ -4231,7 +5113,13 @@
       "phone": "+91 98421 40257",
       "password": "password123",
       "avatar": "YN",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210004",
@@ -4251,7 +5139,13 @@
       "phone": "+91 98421 39292",
       "password": "password123",
       "avatar": "SS",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 5000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210085",
@@ -4271,7 +5165,13 @@
       "phone": "+91 98421 39541",
       "password": "password123",
       "avatar": "SS",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 5000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210638",
@@ -4291,7 +5191,13 @@
       "phone": "+91 98421 45155",
       "password": "password123",
       "avatar": "GN",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210056",
@@ -4311,7 +5217,13 @@
       "phone": "+91 98421 39449",
       "password": "password123",
       "avatar": "SJ",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 3000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210086",
@@ -4331,7 +5243,13 @@
       "phone": "+91 98421 39542",
       "password": "password123",
       "avatar": "TV",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 33000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210889",
@@ -4351,7 +5269,13 @@
       "phone": "+91 98421 47233",
       "password": "password123",
       "avatar": "PP",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210347",
@@ -4371,7 +5295,13 @@
       "phone": "+91 98421 42302",
       "password": "password123",
       "avatar": "SY",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 24000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210680",
@@ -4391,7 +5321,13 @@
       "phone": "+91 98421 45302",
       "password": "password123",
       "avatar": "BN",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210194",
@@ -4411,7 +5347,13 @@
       "phone": "+91 98421 40532",
       "password": "password123",
       "avatar": "KV",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 6000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210408",
@@ -4431,7 +5373,13 @@
       "phone": "+91 98421 43140",
       "password": "password123",
       "avatar": "PV",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210075",
@@ -4451,7 +5399,13 @@
       "phone": "+91 98421 39510",
       "password": "password123",
       "avatar": "JV",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 4000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210204",
@@ -4471,7 +5425,13 @@
       "phone": "+91 98421 41214",
       "password": "password123",
       "avatar": "PH",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 7000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210257",
@@ -4491,7 +5451,13 @@
       "phone": "+91 98421 41372",
       "password": "password123",
       "avatar": "YY",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 42000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210814",
@@ -4511,7 +5477,13 @@
       "phone": "+91 98421 47011",
       "password": "password123",
       "avatar": "SS",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 5000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210773",
@@ -4531,7 +5503,13 @@
       "phone": "+91 98421 46235",
       "password": "password123",
       "avatar": "KD",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210429",
@@ -4551,7 +5529,13 @@
       "phone": "+91 98421 43203",
       "password": "password123",
       "avatar": "BT",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210449",
@@ -4571,7 +5555,13 @@
       "phone": "+91 98421 43265",
       "password": "password123",
       "avatar": "BS",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210414",
@@ -4591,7 +5581,13 @@
       "phone": "+91 98421 43167",
       "password": "password123",
       "avatar": "DH",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 1000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210603",
@@ -4611,7 +5607,13 @@
       "phone": "+91 98421 45057",
       "password": "password123",
       "avatar": "RK",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211044",
@@ -4631,7 +5633,13 @@
       "phone": "+91 98421 69207",
       "password": "password123",
       "avatar": "UM",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 9000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210682",
@@ -4651,7 +5659,13 @@
       "phone": "+91 98421 45304",
       "password": "password123",
       "avatar": "MP",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210336",
@@ -4671,7 +5685,13 @@
       "phone": "+91 98421 42270",
       "password": "password123",
       "avatar": "KN",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 13000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210134",
@@ -4691,7 +5711,13 @@
       "phone": "+91 98421 40346",
       "password": "password123",
       "avatar": "PV",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 9000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210509",
@@ -4711,7 +5737,13 @@
       "phone": "+91 98421 44102",
       "password": "password123",
       "avatar": "PM",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210845",
@@ -4731,7 +5763,13 @@
       "phone": "+91 98421 47105",
       "password": "password123",
       "avatar": "BR",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 9000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210719",
@@ -4751,7 +5789,13 @@
       "phone": "+91 98421 46055",
       "password": "password123",
       "avatar": "TR",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210612",
@@ -4771,7 +5815,13 @@
       "phone": "+91 98421 45087",
       "password": "password123",
       "avatar": "MN",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210197",
@@ -4791,7 +5841,13 @@
       "phone": "+91 98421 40535",
       "password": "password123",
       "avatar": "TM",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 36000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210495",
@@ -4811,7 +5867,13 @@
       "phone": "+91 98421 43416",
       "password": "password123",
       "avatar": "MC",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 1000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211060",
@@ -4831,7 +5893,13 @@
       "phone": "+91 98421 69265",
       "password": "password123",
       "avatar": "SS",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210919",
@@ -4851,7 +5919,13 @@
       "phone": "+91 98421 47977",
       "password": "password123",
       "avatar": "SN",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210650",
@@ -4871,7 +5945,13 @@
       "phone": "+91 98421 45209",
       "password": "password123",
       "avatar": "PM",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210981",
@@ -4891,7 +5971,13 @@
       "phone": "+91 98421 48186",
       "password": "password123",
       "avatar": "GV",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210576",
@@ -4911,7 +5997,13 @@
       "phone": "+91 98421 44316",
       "password": "password123",
       "avatar": "GR",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 37000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210268",
@@ -4931,7 +6023,13 @@
       "phone": "+91 98421 41404",
       "password": "password123",
       "avatar": "SC",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210831",
@@ -4951,7 +6049,13 @@
       "phone": "+91 98421 47070",
       "password": "password123",
       "avatar": "BS",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210871",
@@ -4971,7 +6075,13 @@
       "phone": "+91 98421 47194",
       "password": "password123",
       "avatar": "YH",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210258",
@@ -4991,7 +6101,13 @@
       "phone": "+91 98421 41373",
       "password": "password123",
       "avatar": "KJ",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210162",
@@ -5011,7 +6127,13 @@
       "phone": "+91 98421 40437",
       "password": "password123",
       "avatar": "AS",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210742",
@@ -5031,7 +6153,13 @@
       "phone": "+91 98421 46141",
       "password": "password123",
       "avatar": "RV",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210747",
@@ -5051,7 +6179,13 @@
       "phone": "+91 98421 46146",
       "password": "password123",
       "avatar": "MS",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 46000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210001",
@@ -5071,7 +6205,13 @@
       "phone": "+91 98421 39289",
       "password": "password123",
       "avatar": "MG",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210037",
@@ -5091,7 +6231,13 @@
       "phone": "+91 98421 39388",
       "password": "password123",
       "avatar": "VR",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 38000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210406",
@@ -5111,7 +6257,13 @@
       "phone": "+91 98421 43138",
       "password": "password123",
       "avatar": "PJ",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 29000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210115",
@@ -5131,7 +6283,13 @@
       "phone": "+91 98421 40285",
       "password": "password123",
       "avatar": "SN",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 8000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210488",
@@ -5151,7 +6309,13 @@
       "phone": "+91 98421 43388",
       "password": "password123",
       "avatar": "MV",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210139",
@@ -5171,7 +6335,13 @@
       "phone": "+91 98421 40351",
       "password": "password123",
       "avatar": "TS",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210666",
@@ -5191,7 +6361,13 @@
       "phone": "+91 98421 45246",
       "password": "password123",
       "avatar": "MR",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 19000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210811",
@@ -5211,7 +6387,13 @@
       "phone": "+91 98421 47008",
       "password": "password123",
       "avatar": "PS",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210771",
@@ -5231,7 +6413,13 @@
       "phone": "+91 98421 46233",
       "password": "password123",
       "avatar": "SM",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210595",
@@ -5251,7 +6439,13 @@
       "phone": "+91 98421 44377",
       "password": "password123",
       "avatar": "MS",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 2000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210587",
@@ -5271,7 +6465,13 @@
       "phone": "+91 98421 44348",
       "password": "password123",
       "avatar": "AB",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 48000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210073",
@@ -5291,7 +6491,13 @@
       "phone": "+91 98421 39508",
       "password": "password123",
       "avatar": "AP",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210689",
@@ -5311,7 +6517,13 @@
       "phone": "+91 98421 45311",
       "password": "password123",
       "avatar": "KS",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210363",
@@ -5331,7 +6543,13 @@
       "phone": "+91 98421 42360",
       "password": "password123",
       "avatar": "DV",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210416",
@@ -5351,7 +6569,13 @@
       "phone": "+91 98421 43169",
       "password": "password123",
       "avatar": "GK",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 39000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210436",
@@ -5371,7 +6595,13 @@
       "phone": "+91 98421 43231",
       "password": "password123",
       "avatar": "MR",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 5000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210400",
@@ -5391,7 +6621,13 @@
       "phone": "+91 98421 43132",
       "password": "password123",
       "avatar": "KV",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210750",
@@ -5411,7 +6647,13 @@
       "phone": "+91 98421 46170",
       "password": "password123",
       "avatar": "DC",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210353",
@@ -5431,7 +6673,13 @@
       "phone": "+91 98421 42329",
       "password": "password123",
       "avatar": "ZV",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210647",
@@ -5451,7 +6699,13 @@
       "phone": "+91 98421 45185",
       "password": "password123",
       "avatar": "SF",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 54000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211057",
@@ -5471,7 +6725,13 @@
       "phone": "+91 98421 69241",
       "password": "password123",
       "avatar": "KD",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 4000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210536",
@@ -5491,7 +6751,13 @@
       "phone": "+91 98421 44192",
       "password": "password123",
       "avatar": "MR",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 51000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210117",
@@ -5511,7 +6777,13 @@
       "phone": "+91 98421 40287",
       "password": "password123",
       "avatar": "MA",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 10000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210947",
@@ -5531,7 +6803,13 @@
       "phone": "+91 98421 48068",
       "password": "password123",
       "avatar": "CY",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 30000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210941",
@@ -5551,7 +6829,13 @@
       "phone": "+91 98421 48062",
       "password": "password123",
       "avatar": "VR",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210987",
@@ -5571,7 +6855,13 @@
       "phone": "+91 98421 48192",
       "password": "password123",
       "avatar": "NS",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 16000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210435",
@@ -5591,7 +6881,13 @@
       "phone": "+91 98421 43230",
       "password": "password123",
       "avatar": "JS",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 4000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211054",
@@ -5611,7 +6907,13 @@
       "phone": "+91 98421 69238",
       "password": "password123",
       "avatar": "SK",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 1000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211027",
@@ -5631,7 +6933,13 @@
       "phone": "+91 98421 69148",
       "password": "password123",
       "avatar": "IS",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 28000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "N210525",
@@ -5651,7 +6959,13 @@
       "phone": "+91 98421 75009",
       "password": "password123",
       "avatar": "MB",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 4000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210664",
@@ -5671,7 +6985,13 @@
       "phone": "+91 98421 45244",
       "password": "password123",
       "avatar": "MY",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 8000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210087",
@@ -5691,7 +7011,13 @@
       "phone": "+91 98421 39543",
       "password": "password123",
       "avatar": "BY",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 34000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210674",
@@ -5711,7 +7037,13 @@
       "phone": "+91 98421 45275",
       "password": "password123",
       "avatar": "PR",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 9000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210645",
@@ -5731,7 +7063,13 @@
       "phone": "+91 98421 45183",
       "password": "password123",
       "avatar": "BP",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 7000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210774",
@@ -5751,7 +7089,13 @@
       "phone": "+91 98421 46236",
       "password": "password123",
       "avatar": "MJ",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 1000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210463",
@@ -5771,7 +7115,13 @@
       "phone": "+91 98421 43321",
       "password": "password123",
       "avatar": "DA",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210021",
@@ -5791,7 +7141,13 @@
       "phone": "+91 98421 39351",
       "password": "password123",
       "avatar": "BS",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210195",
@@ -5811,7 +7167,13 @@
       "phone": "+91 98421 40533",
       "password": "password123",
       "avatar": "MC",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 7000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210278",
@@ -5831,7 +7193,13 @@
       "phone": "+91 98421 41435",
       "password": "password123",
       "avatar": "VS",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210757",
@@ -5851,7 +7219,13 @@
       "phone": "+91 98421 46177",
       "password": "password123",
       "avatar": "GJ",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 2000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210296",
@@ -5871,7 +7245,13 @@
       "phone": "+91 98421 41495",
       "password": "password123",
       "avatar": "SS",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 27000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210867",
@@ -5891,7 +7271,13 @@
       "phone": "+91 98421 47169",
       "password": "password123",
       "avatar": "SP",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 4000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210167",
@@ -5911,7 +7297,13 @@
       "phone": "+91 98421 40442",
       "password": "password123",
       "avatar": "BK",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 6000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210068",
@@ -5931,7 +7323,13 @@
       "phone": "+91 98421 39482",
       "password": "password123",
       "avatar": "MS",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210753",
@@ -5951,7 +7349,13 @@
       "phone": "+91 98421 46173",
       "password": "password123",
       "avatar": "VG",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210570",
@@ -5971,7 +7375,13 @@
       "phone": "+91 98421 44310",
       "password": "password123",
       "avatar": "LS",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210453",
@@ -5991,7 +7401,13 @@
       "phone": "+91 98421 43290",
       "password": "password123",
       "avatar": "AN",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210791",
@@ -6011,7 +7427,13 @@
       "phone": "+91 98421 46295",
       "password": "password123",
       "avatar": "SH",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210724",
@@ -6031,7 +7453,13 @@
       "phone": "+91 98421 46081",
       "password": "password123",
       "avatar": "CS",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 5000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210820",
@@ -6051,7 +7479,13 @@
       "phone": "+91 98421 47038",
       "password": "password123",
       "avatar": "UG",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210661",
@@ -6071,7 +7505,13 @@
       "phone": "+91 98421 45241",
       "password": "password123",
       "avatar": "GA",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210504",
@@ -6091,7 +7531,13 @@
       "phone": "+91 98421 44097",
       "password": "password123",
       "avatar": "DG",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 1000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210369",
@@ -6111,7 +7557,13 @@
       "phone": "+91 98421 42366",
       "password": "password123",
       "avatar": "AB",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210227",
@@ -6131,7 +7583,13 @@
       "phone": "+91 98421 41279",
       "password": "password123",
       "avatar": "BC",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 12000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210599",
@@ -6151,7 +7609,13 @@
       "phone": "+91 98421 44381",
       "password": "password123",
       "avatar": "CU",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210351",
@@ -6171,7 +7635,13 @@
       "phone": "+91 98421 42327",
       "password": "password123",
       "avatar": "BS",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210554",
@@ -6191,7 +7661,13 @@
       "phone": "+91 98421 44252",
       "password": "password123",
       "avatar": "KU",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 6000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210233",
@@ -6211,7 +7687,13 @@
       "phone": "+91 98421 41306",
       "password": "password123",
       "avatar": "SA",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210780",
@@ -6231,7 +7713,13 @@
       "phone": "+91 98421 46263",
       "password": "password123",
       "avatar": "AG",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210120",
@@ -6251,7 +7739,13 @@
       "phone": "+91 98421 40311",
       "password": "password123",
       "avatar": "VL",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210944",
@@ -6271,7 +7765,13 @@
       "phone": "+91 98421 48065",
       "password": "password123",
       "avatar": "MS",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 9000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210681",
@@ -6291,7 +7791,13 @@
       "phone": "+91 98421 45303",
       "password": "password123",
       "avatar": "SK",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210960",
@@ -6311,7 +7817,13 @@
       "phone": "+91 98421 48123",
       "password": "password123",
       "avatar": "MS",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211082",
@@ -6331,7 +7843,13 @@
       "phone": "+91 98421 69329",
       "password": "password123",
       "avatar": "AJ",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210951",
@@ -6351,7 +7869,13 @@
       "phone": "+91 98421 48093",
       "password": "password123",
       "avatar": "MS",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210695",
@@ -6371,7 +7895,13 @@
       "phone": "+91 98421 45338",
       "password": "password123",
       "avatar": "US",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 3000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210965",
@@ -6391,7 +7921,13 @@
       "phone": "+91 98421 48128",
       "password": "password123",
       "avatar": "NV",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 3000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210154",
@@ -6411,7 +7947,13 @@
       "phone": "+91 98421 40408",
       "password": "password123",
       "avatar": "KP",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 2000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210024",
@@ -6431,7 +7973,13 @@
       "phone": "+91 98421 39354",
       "password": "password123",
       "avatar": "RY",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 7000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210129",
@@ -6451,7 +7999,13 @@
       "phone": "+91 98421 40320",
       "password": "password123",
       "avatar": "DV",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210059",
@@ -6471,7 +8025,13 @@
       "phone": "+91 98421 39452",
       "password": "password123",
       "avatar": "KP",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210030",
@@ -6491,7 +8051,13 @@
       "phone": "+91 98421 39381",
       "password": "password123",
       "avatar": "NC",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210080",
@@ -6511,7 +8077,13 @@
       "phone": "+91 98421 39536",
       "password": "password123",
       "avatar": "GA",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210415",
@@ -6531,7 +8103,13 @@
       "phone": "+91 98421 43168",
       "password": "password123",
       "avatar": "SL",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 2000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210187",
@@ -6551,7 +8129,13 @@
       "phone": "+91 98421 40504",
       "password": "password123",
       "avatar": "KS",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 26000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210098",
@@ -6571,7 +8155,13 @@
       "phone": "+91 98421 39575",
       "password": "password123",
       "avatar": "DP",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210421",
@@ -6591,7 +8181,13 @@
       "phone": "+91 98421 43195",
       "password": "password123",
       "avatar": "GN",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210564",
@@ -6611,7 +8207,13 @@
       "phone": "+91 98421 44283",
       "password": "password123",
       "avatar": "GK",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 7000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210610",
@@ -6631,7 +8233,13 @@
       "phone": "+91 98421 45085",
       "password": "password123",
       "avatar": "SU",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210321",
@@ -6651,7 +8259,13 @@
       "phone": "+91 98421 42234",
       "password": "password123",
       "avatar": "DS",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210431",
@@ -6671,7 +8285,13 @@
       "phone": "+91 98421 43226",
       "password": "password123",
       "avatar": "KD",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210744",
@@ -6691,7 +8311,13 @@
       "phone": "+91 98421 46143",
       "password": "password123",
       "avatar": "PM",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 7000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210214",
@@ -6711,7 +8337,13 @@
       "phone": "+91 98421 41245",
       "password": "password123",
       "avatar": "KA",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 8000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210430",
@@ -6731,7 +8363,13 @@
       "phone": "+91 98421 43225",
       "password": "password123",
       "avatar": "VC",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210264",
@@ -6751,7 +8389,13 @@
       "phone": "+91 98421 41400",
       "password": "password123",
       "avatar": "UR",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 4000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210249",
@@ -6771,7 +8415,13 @@
       "phone": "+91 98421 41343",
       "password": "password123",
       "avatar": "BN",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210904",
@@ -6791,7 +8441,13 @@
       "phone": "+91 98421 47941",
       "password": "password123",
       "avatar": "CB",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 5000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210299",
@@ -6811,7 +8467,13 @@
       "phone": "+91 98421 41498",
       "password": "password123",
       "avatar": "NS",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210460",
@@ -6831,7 +8493,13 @@
       "phone": "+91 98421 43318",
       "password": "password123",
       "avatar": "DY",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210898",
@@ -6851,7 +8519,13 @@
       "phone": "+91 98421 47263",
       "password": "password123",
       "avatar": "KC",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210762",
@@ -6871,7 +8545,13 @@
       "phone": "+91 98421 46203",
       "password": "password123",
       "avatar": "SR",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211088",
@@ -6891,7 +8571,13 @@
       "phone": "+91 98421 69335",
       "password": "password123",
       "avatar": "MN",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210366",
@@ -6911,7 +8597,13 @@
       "phone": "+91 98421 42363",
       "password": "password123",
       "avatar": "KP",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 43000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211004",
@@ -6931,7 +8623,13 @@
       "phone": "+91 98421 69083",
       "password": "password123",
       "avatar": "PV",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 5000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210929",
@@ -6951,7 +8649,13 @@
       "phone": "+91 98421 48008",
       "password": "password123",
       "avatar": "TT",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210367",
@@ -6971,7 +8675,13 @@
       "phone": "+91 98421 42364",
       "password": "password123",
       "avatar": "KG",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 44000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210853",
@@ -6991,7 +8701,13 @@
       "phone": "+91 98421 47134",
       "password": "password123",
       "avatar": "TJ",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211007",
@@ -7011,7 +8727,13 @@
       "phone": "+91 98421 69086",
       "password": "password123",
       "avatar": "LV",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 8000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210547",
@@ -7031,7 +8753,13 @@
       "phone": "+91 98421 44224",
       "password": "password123",
       "avatar": "MS",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 8000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210931",
@@ -7051,7 +8779,13 @@
       "phone": "+91 98421 48031",
       "password": "password123",
       "avatar": "BK",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210972",
@@ -7071,7 +8805,13 @@
       "phone": "+91 98421 48156",
       "password": "password123",
       "avatar": "MS",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210390",
@@ -7091,7 +8831,13 @@
       "phone": "+91 98421 42450",
       "password": "password123",
       "avatar": "LS",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210218",
@@ -7111,7 +8857,13 @@
       "phone": "+91 98421 41249",
       "password": "password123",
       "avatar": "PV",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210440",
@@ -7131,7 +8883,13 @@
       "phone": "+91 98421 43256",
       "password": "password123",
       "avatar": "BH",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210181",
@@ -7151,7 +8909,13 @@
       "phone": "+91 98421 40498",
       "password": "password123",
       "avatar": "MV",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210448",
@@ -7171,7 +8935,13 @@
       "phone": "+91 98421 43264",
       "password": "password123",
       "avatar": "SH",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210036",
@@ -7191,7 +8961,13 @@
       "phone": "+91 98421 39387",
       "password": "password123",
       "avatar": "BV",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 37000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210153",
@@ -7211,7 +8987,13 @@
       "phone": "+91 98421 40407",
       "password": "password123",
       "avatar": "GD",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210631",
@@ -7231,7 +9013,13 @@
       "phone": "+91 98421 45148",
       "password": "password123",
       "avatar": "PM",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210478",
@@ -7251,7 +9039,13 @@
       "phone": "+91 98421 43357",
       "password": "password123",
       "avatar": "RH",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210222",
@@ -7271,7 +9065,13 @@
       "phone": "+91 98421 41274",
       "password": "password123",
       "avatar": "EN",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210304",
@@ -7291,7 +9091,13 @@
       "phone": "+91 98421 42175",
       "password": "password123",
       "avatar": "DV",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 8000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210649",
@@ -7311,7 +9117,13 @@
       "phone": "+91 98421 45187",
       "password": "password123",
       "avatar": "GR",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210688",
@@ -7331,7 +9143,13 @@
       "phone": "+91 98421 45310",
       "password": "password123",
       "avatar": "SJ",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210045",
@@ -7351,7 +9169,13 @@
       "phone": "+91 98421 39417",
       "password": "password123",
       "avatar": "SY",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 1000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210482",
@@ -7371,7 +9195,13 @@
       "phone": "+91 98421 43382",
       "password": "password123",
       "avatar": "MR",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210961",
@@ -7391,7 +9221,13 @@
       "phone": "+91 98421 48124",
       "password": "password123",
       "avatar": "MS",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210524",
@@ -7411,7 +9247,13 @@
       "phone": "+91 98421 44159",
       "password": "password123",
       "avatar": "ML",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 3000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210525",
@@ -7431,7 +9273,13 @@
       "phone": "+91 98421 44160",
       "password": "password123",
       "avatar": "GS",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 4000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210344",
@@ -7451,7 +9299,13 @@
       "phone": "+91 98421 42299",
       "password": "password123",
       "avatar": "PR",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 3000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210660",
@@ -7471,7 +9325,13 @@
       "phone": "+91 98421 45240",
       "password": "password123",
       "avatar": "NC",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210355",
@@ -7491,7 +9351,13 @@
       "phone": "+91 98421 42331",
       "password": "password123",
       "avatar": "SG",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 5000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210019",
@@ -7511,7 +9377,13 @@
       "phone": "+91 98421 39328",
       "password": "password123",
       "avatar": "DL",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210740",
@@ -7531,7 +9403,13 @@
       "phone": "+91 98421 46139",
       "password": "password123",
       "avatar": "PS",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211042",
@@ -7551,7 +9429,13 @@
       "phone": "+91 98421 69205",
       "password": "password123",
       "avatar": "BC",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210468",
@@ -7571,7 +9455,13 @@
       "phone": "+91 98421 43326",
       "password": "password123",
       "avatar": "BK",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210121",
@@ -7591,7 +9481,13 @@
       "phone": "+91 98421 40312",
       "password": "password123",
       "avatar": "AS",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210852",
@@ -7611,7 +9507,13 @@
       "phone": "+91 98421 47133",
       "password": "password123",
       "avatar": "CS",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210862",
@@ -7631,7 +9533,13 @@
       "phone": "+91 98421 47164",
       "password": "password123",
       "avatar": "AP",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210458",
@@ -7651,7 +9559,13 @@
       "phone": "+91 98421 43295",
       "password": "password123",
       "avatar": "CN",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210670",
@@ -7671,7 +9585,13 @@
       "phone": "+91 98421 45271",
       "password": "password123",
       "avatar": "VY",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210684",
@@ -7691,7 +9611,13 @@
       "phone": "+91 98421 45306",
       "password": "password123",
       "avatar": "KM",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 1000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210879",
@@ -7711,7 +9637,13 @@
       "phone": "+91 98421 47202",
       "password": "password123",
       "avatar": "PI",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210834",
@@ -7731,7 +9663,13 @@
       "phone": "+91 98421 47073",
       "password": "password123",
       "avatar": "TG",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 7000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210553",
@@ -7751,7 +9689,13 @@
       "phone": "+91 98421 44251",
       "password": "password123",
       "avatar": "JS",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210226",
@@ -7771,7 +9715,13 @@
       "phone": "+91 98421 41278",
       "password": "password123",
       "avatar": "HN",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 11000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210930",
@@ -7791,7 +9741,13 @@
       "phone": "+91 98421 48030",
       "password": "password123",
       "avatar": "BK",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211100",
@@ -7811,7 +9767,13 @@
       "phone": "+91 98421 70040",
       "password": "password123",
       "avatar": "DL",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210042",
@@ -7831,7 +9793,13 @@
       "phone": "+91 98421 39414",
       "password": "password123",
       "avatar": "RS",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210027",
@@ -7851,7 +9819,13 @@
       "phone": "+91 98421 39357",
       "password": "password123",
       "avatar": "SN",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 28000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210020",
@@ -7871,7 +9845,13 @@
       "phone": "+91 98421 39350",
       "password": "password123",
       "avatar": "KA",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210025",
@@ -7891,7 +9871,13 @@
       "phone": "+91 98421 39355",
       "password": "password123",
       "avatar": "MA",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 8000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210590",
@@ -7911,7 +9897,13 @@
       "phone": "+91 98421 44372",
       "password": "password123",
       "avatar": "TS",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210147",
@@ -7931,7 +9923,13 @@
       "phone": "+91 98421 40380",
       "password": "password123",
       "avatar": "CV",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 40000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210094",
@@ -7951,7 +9949,13 @@
       "phone": "+91 98421 39571",
       "password": "password123",
       "avatar": "SM",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 5000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210016",
@@ -7971,7 +9975,13 @@
       "phone": "+91 98421 39325",
       "password": "password123",
       "avatar": "KG",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 17000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210768",
@@ -7991,7 +10001,13 @@
       "phone": "+91 98421 46209",
       "password": "password123",
       "avatar": "BB",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210164",
@@ -8011,7 +10027,13 @@
       "phone": "+91 98421 40439",
       "password": "password123",
       "avatar": "PK",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 3000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210015",
@@ -8031,7 +10053,13 @@
       "phone": "+91 98421 39324",
       "password": "password123",
       "avatar": "DC",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 7000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210387",
@@ -8051,7 +10079,13 @@
       "phone": "+91 98421 42426",
       "password": "password123",
       "avatar": "BV",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 10000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210125",
@@ -8071,7 +10105,13 @@
       "phone": "+91 98421 40316",
       "password": "password123",
       "avatar": "PA",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 9000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210089",
@@ -8091,7 +10131,13 @@
       "phone": "+91 98421 39545",
       "password": "password123",
       "avatar": "KM",
-      "avatarBg": "bg-purple-600"
+      "avatarBg": "bg-purple-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210186",
@@ -8111,7 +10157,13 @@
       "phone": "+91 98421 40503",
       "password": "password123",
       "avatar": "PV",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 25000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210685",
@@ -8131,7 +10183,13 @@
       "phone": "+91 98421 45307",
       "password": "password123",
       "avatar": "KN",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 2000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210105",
@@ -8151,7 +10209,13 @@
       "phone": "+91 98421 40254",
       "password": "password123",
       "avatar": "DS",
-      "avatarBg": "bg-teal-600"
+      "avatarBg": "bg-teal-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 7000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210071",
@@ -8171,7 +10235,13 @@
       "phone": "+91 98421 39506",
       "password": "password123",
       "avatar": "KS",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210888",
@@ -8191,7 +10261,13 @@
       "phone": "+91 98421 47232",
       "password": "password123",
       "avatar": "GS",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210476",
@@ -8211,7 +10287,13 @@
       "phone": "+91 98421 43355",
       "password": "password123",
       "avatar": "GS",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 45000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210903",
@@ -8231,7 +10313,13 @@
       "phone": "+91 98421 47940",
       "password": "password123",
       "avatar": "TS",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210758",
@@ -8251,7 +10339,13 @@
       "phone": "+91 98421 46178",
       "password": "password123",
       "avatar": "SM",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210810",
@@ -8271,7 +10365,13 @@
       "phone": "+91 98421 47007",
       "password": "password123",
       "avatar": "BM",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210653",
@@ -8291,7 +10391,13 @@
       "phone": "+91 98421 45212",
       "password": "password123",
       "avatar": "SP",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210312",
@@ -8311,7 +10417,13 @@
       "phone": "+91 98421 42204",
       "password": "password123",
       "avatar": "NJ",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210967",
@@ -8331,7 +10443,13 @@
       "phone": "+91 98421 48130",
       "password": "password123",
       "avatar": "BJ",
-      "avatarBg": "bg-emerald-600"
+      "avatarBg": "bg-emerald-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 50000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210763",
@@ -8351,7 +10469,13 @@
       "phone": "+91 98421 46204",
       "password": "password123",
       "avatar": "TM",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210890",
@@ -8371,7 +10495,13 @@
       "phone": "+91 98421 47255",
       "password": "password123",
       "avatar": "KA",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211008",
@@ -8391,7 +10521,13 @@
       "phone": "+91 98421 69087",
       "password": "password123",
       "avatar": "SD",
-      "avatarBg": "bg-blue-600"
+      "avatarBg": "bg-blue-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210781",
@@ -8411,7 +10547,13 @@
       "phone": "+91 98421 46264",
       "password": "password123",
       "avatar": "NV",
-      "avatarBg": "bg-indigo-600"
+      "avatarBg": "bg-indigo-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 0,
+      "feeStatus": "Paid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R210895",
@@ -8431,7 +10573,13 @@
       "phone": "+91 98421 47260",
       "password": "password123",
       "avatar": "DP",
-      "avatarBg": "bg-sky-600"
+      "avatarBg": "bg-sky-600",
+      "scholarship": true,
+      "govtScholarship": 35000,
+      "semFeeTotal": 10000,
+      "feeDue": 5000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211026",
@@ -8451,7 +10599,13 @@
       "phone": "+91 98421 69147",
       "password": "password123",
       "avatar": "BM",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 27000,
+      "feeStatus": "Partial",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211028",
@@ -8471,7 +10625,13 @@
       "phone": "+91 98421 69149",
       "password": "password123",
       "avatar": "MS",
-      "avatarBg": "bg-amber-600"
+      "avatarBg": "bg-amber-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     },
     {
       "id": "R211048",
@@ -8491,7 +10651,13 @@
       "phone": "+91 98421 69211",
       "password": "password123",
       "avatar": "RR",
-      "avatarBg": "bg-rose-600"
+      "avatarBg": "bg-rose-600",
+      "scholarship": false,
+      "govtScholarship": 0,
+      "semFeeTotal": 55000,
+      "feeDue": 55000,
+      "feeStatus": "Unpaid",
+      "feeSem": "Semester VII (Odd 2026-27)"
     }
   ]
 }
