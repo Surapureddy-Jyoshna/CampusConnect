@@ -832,7 +832,7 @@ app.post('/api/chat', async (req, res) => {
 
     // Check if query is asking for personal student details or identity (NOT circular/notice queries)
     const isPersonalQuery = !isNoticeQuery && (
-      /(^|\b)(attendance|present|absent|classes\s*attended|bunk|shortage|condonation|eligib|cgpa|gpa|marks|grade|score|rank|advisor|mentor|counselor|faculty\s*advisor|faculty\s*mentor|guide|hostel|room|gh2|bh2|curfew|hall\s*ticket|fee\s*due|my\s*fee|fees?\s*pending|fees?\s*status|fees?\s*paid|fees?\s*unpaid|scholarship|fee\s*balance|sem\s*fee|semester\s*fee|how\s*much\s*fee|about\s*me|who\s*am\s*i|who\s*i\s*am|whoami|my\s*name|what\s*is\s*my\s*name|what\s*s\s*my\s*name|my\s*id|what\s*is\s*my\s*id|id\s*number|roll\s*number|roll\s*no|my\s*roll|student\s*id|my\s*email|what\s*is\s*my\s*email|my\s*mail|my\s*branch|my\s*department|my\s*dept|my\s*section|my\s*batch|my\s*sem|my\s*semester|my\s*hostel|my\s*room|my\s*cgpa|my\s*attendance|my\s*advisor|my\s*details|my\s*profile|my\s*info|my\s*record|my\s*records|student\s*details|student\s*profile|personal\s*details)(\b|$)/i.test(lowerQuery)
+      /(^|\b)(attendance|present|absent|classes\s*attended|bunk|shortage|condonation|eligib|cgpa|gpa|marks|grade|score|rank|advisor|mentor|counselor|faculty\s*advisor|faculty\s*mentor|guide|hostel|room|gh2|bh2|curfew|hall\s*ticket|fee\s*due|my\s*fee|fees?\s*pending|fees?\s*status|fees?\s*paid|fees?\s*unpaid|payment|scholarship|fee\s*balance|sem\s*fee|semester\s*fee|how\s*much\s*fee|about\s*me|who\s*am\s*i|who\s*i\s*am|whoami|my\s*name|what\s*is\s*my\s*name|what\s*s\s*my\s*name|my\s*id|what\s*is\s*my\s*id|id\s*number|roll\s*number|roll\s*no|my\s*roll|student\s*id|my\s*email|what\s*is\s*my\s*email|my\s*mail|my\s*branch|my\s*department|my\s*dept|my\s*section|my\s*batch|my\s*sem|my\s*semester|my\s*hostel|my\s*room|my\s*cgpa|my\s*attendance|my\s*advisor|my\s*details|my\s*profile|my\s*info|my\s*record|my\s*records|student\s*details|student\s*profile|personal\s*details)(\b|$)/i.test(lowerQuery)
       || (targetStudentId && /\b(my|i|me|myself)\b/i.test(lowerQuery) && /\b(name|id|roll|email|mail|advisor|mentor|hostel|room|cgpa|gpa|marks|attendance|branch|department|section|details|profile|record|fee|fees|scholarship|due|pending)\b/i.test(lowerQuery))
       || (targetStudentId && /^(what|tell|show|who|give)\b.*\b(my|me)\b/i.test(lowerQuery) && !/\b(circular|notice|announcement)\b/i.test(lowerQuery))
     );
@@ -962,7 +962,7 @@ app.post('/api/chat', async (req, res) => {
         }
         // 9. General profile / details inquiry: Full profile table reserved for "my details", "profile", "who am i", etc.
         else {
-          category = 'student_record';
+          category = 'student_records';
           const isScholarFull = student.scholarship === true;
           const semFeeFull = typeof student.semFeeTotal === 'number' ? student.semFeeTotal : (isScholarFull ? 10000 : 55000);
           const feeDueFull = typeof student.feeDue === 'number' ? student.feeDue : 0;
