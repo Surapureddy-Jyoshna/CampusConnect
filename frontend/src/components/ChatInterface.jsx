@@ -73,6 +73,7 @@ You can ask me:
 - 🏆 **"What is my CGPA?"**
 - 👨‍🏫 **"Who is my faculty advisor?"**
 - 🏠 **"What is my hostel room allocation?"**
+- 💰 **"What is my fee due?"** *(Scholarship & fee status)*
 - 📅 **"${currentBatch} Examination Timetable & Internal Assessment Dates"**
 - 💳 **"${currentBatch} Fee Structure & Payment Deadlines"**
 - 🌴 **"Official Holiday Calendar & Semester Vacation Dates"**
@@ -314,6 +315,12 @@ I am now personalized to answer queries according to the **${currentBatch} Acade
               className="whitespace-nowrap px-2.5 py-1 rounded-full text-[11px] font-bold bg-purple-50 hover:bg-purple-100 text-purple-800 border border-purple-300 shadow-2xs transition-all shrink-0 flex items-center gap-1"
             >
               <span>🏠 My Hostel Room</span>
+            </button>
+            <button
+              onClick={() => handleSend("What is my fee due?")}
+              className="whitespace-nowrap px-2.5 py-1 rounded-full text-[11px] font-bold bg-rose-50 hover:bg-rose-100 text-rose-800 border border-rose-300 shadow-2xs transition-all shrink-0 flex items-center gap-1"
+            >
+              <span>💰 My Fee Due</span>
             </button>
           </>
         )}

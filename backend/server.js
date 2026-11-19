@@ -832,8 +832,8 @@ app.post('/api/chat', async (req, res) => {
 
     // Check if query is asking for personal student details or identity (NOT circular/notice queries)
     const isPersonalQuery = !isNoticeQuery && (
-      /(^|\b)(attendance|present|absent|classes\s*attended|bunk|shortage|condonation|eligib|cgpa|gpa|marks|grade|score|rank|advisor|mentor|counselor|faculty\s*advisor|faculty\s*mentor|guide|hostel|room|gh2|bh2|curfew|hall\s*ticket|about\s*me|who\s*am\s*i|who\s*i\s*am|whoami|my\s*name|what\s*is\s*my\s*name|what\s*s\s*my\s*name|my\s*id|what\s*is\s*my\s*id|id\s*number|roll\s*number|roll\s*no|my\s*roll|student\s*id|my\s*email|what\s*is\s*my\s*email|my\s*mail|my\s*branch|my\s*department|my\s*dept|my\s*section|my\s*batch|my\s*sem|my\s*semester|my\s*hostel|my\s*room|my\s*cgpa|my\s*attendance|my\s*advisor|my\s*details|my\s*profile|my\s*info|my\s*record|my\s*records|student\s*details|student\s*profile|personal\s*details)(\b|$)/i.test(lowerQuery)
-      || (targetStudentId && /\b(my|i|me|myself)\b/i.test(lowerQuery) && /\b(name|id|roll|email|mail|advisor|mentor|hostel|room|cgpa|gpa|marks|attendance|branch|department|section|details|profile|record)\b/i.test(lowerQuery))
+      /(^|\b)(attendance|present|absent|classes\s*attended|bunk|shortage|condonation|eligib|cgpa|gpa|marks|grade|score|rank|advisor|mentor|counselor|faculty\s*advisor|faculty\s*mentor|guide|hostel|room|gh2|bh2|curfew|hall\s*ticket|fee\s*due|my\s*fee|fees?\s*pending|fees?\s*status|fees?\s*paid|fees?\s*unpaid|scholarship|fee\s*balance|sem\s*fee|semester\s*fee|how\s*much\s*fee|about\s*me|who\s*am\s*i|who\s*i\s*am|whoami|my\s*name|what\s*is\s*my\s*name|what\s*s\s*my\s*name|my\s*id|what\s*is\s*my\s*id|id\s*number|roll\s*number|roll\s*no|my\s*roll|student\s*id|my\s*email|what\s*is\s*my\s*email|my\s*mail|my\s*branch|my\s*department|my\s*dept|my\s*section|my\s*batch|my\s*sem|my\s*semester|my\s*hostel|my\s*room|my\s*cgpa|my\s*attendance|my\s*advisor|my\s*details|my\s*profile|my\s*info|my\s*record|my\s*records|student\s*details|student\s*profile|personal\s*details)(\b|$)/i.test(lowerQuery)
+      || (targetStudentId && /\b(my|i|me|myself)\b/i.test(lowerQuery) && /\b(name|id|roll|email|mail|advisor|mentor|hostel|room|cgpa|gpa|marks|attendance|branch|department|section|details|profile|record|fee|fees|scholarship|due|pending)\b/i.test(lowerQuery))
       || (targetStudentId && /^(what|tell|show|who|give)\b.*\b(my|me)\b/i.test(lowerQuery) && !/\b(circular|notice|announcement)\b/i.test(lowerQuery))
     );
 
@@ -858,8 +858,39 @@ app.post('/api/chat', async (req, res) => {
         const attendanceNum = parseInt(student.attendance) || 85;
         const isEligible = attendanceNum >= 75;
 
+        // 0. Fee Due / Scholarship query — MUST come first before generic knowledge base kicks in!
+        if (/fee\s*due|fee\s*pending|fee\s*balance|my\s*fee|fees?\s*status|fees?\s*paid|fees?\s*unpaid|semester\s*fee|sem\s*fee|how\s*much\s*fee|scholarship|fee\s*details/i.test(lowerQuery)) {
+          category = 'fee_status';
+          const isScholar = student.scholarship === true;
+          const semFee = typeof student.semFeeTotal === 'number' ? student.semFeeTotal : (isScholar ? 10000 : 55000);
+          const feeDue = typeof student.feeDue === 'number' ? student.feeDue : 0;
+          const govtAmt = typeof student.govtScholarship === 'number' ? student.govtScholarship : (isScholar ? 35000 : 0);
+          const feeStatus = student.feeStatus || (feeDue === 0 ? 'Paid' : feeDue === semFee ? 'Unpaid' : 'Partial');
+          const feeSem = student.feeSem || 'Semester VII (Odd 2026-27)';
+          const feePaid = semFee - feeDue;
+
+          const statusMsg = feeStatus === 'Paid'
+            ? '**✅ All fees cleared for this semester!**'
+            : feeStatus === 'Partial'
+              ? `**🟡 Partial payment made — ₹${feeDue.toLocaleString('en-IN')} still pending**`
+              : `**🔴 Fee not paid — ₹${feeDue.toLocaleString('en-IN')} pending**`;
+
+          answerText = `### 💰 Fee Status for **${student.name}** (\`${student.id}\`)\n\n` +
+            `- **Semester:** ${feeSem}\n` +
+            `- **Scholarship Status:** ${isScholar ? '📚 **Scholarship Holder** (Government BC/SC/ST)' : '💼 **Non-Scholarship** (Self-Financed)'}\n` +
+            (isScholar ? `- **Government Scholarship:** ₹${govtAmt.toLocaleString('en-IN')} (credited by AP Govt)\n` : '') +
+            `- **Student's Semester Fee Obligation:** ₹${semFee.toLocaleString('en-IN')}\n` +
+            `- **Amount Paid:** ₹${feePaid.toLocaleString('en-IN')}\n` +
+            `- **Fee Due / Pending:** **₹${feeDue.toLocaleString('en-IN')}**\n` +
+            `- **Payment Status:** ${statusMsg}\n\n` +
+            (feeDue > 0
+              ? `> ⚠️ **Action Required:** Please pay ₹${feeDue.toLocaleString('en-IN')} at the Accounts Office or via the ERP portal before the due date to avoid late fee penalties.\n\n`
+              : '') +
+            `*Fee records are maintained by the RGUKT RK Valley Accounts Division. Contact the Fee Section for receipts or discrepancies.*`;
+        }
+
         // 1. Attendance query: Returns ONLY attendance percentage and examination eligibility!
-        if (/attendance|present|absent|shortage|condonation|eligib|classes\s*attended|bunk/i.test(lowerQuery)) {
+        else if (/attendance|present|absent|shortage|condonation|eligib|classes\s*attended|bunk/i.test(lowerQuery)) {
           category = 'attendance';
           answerText = `### 📊 Live Attendance Record for **${student.name}** (\`${student.id}\`)\n\n` +
             `- **Current Attendance:** **\`${student.attendance}\`**\n` +
@@ -932,6 +963,12 @@ app.post('/api/chat', async (req, res) => {
         // 9. General profile / details inquiry: Full profile table reserved for "my details", "profile", "who am i", etc.
         else {
           category = 'student_record';
+          const isScholarFull = student.scholarship === true;
+          const semFeeFull = typeof student.semFeeTotal === 'number' ? student.semFeeTotal : (isScholarFull ? 10000 : 55000);
+          const feeDueFull = typeof student.feeDue === 'number' ? student.feeDue : 0;
+          const feeStatusFull = student.feeStatus || (feeDueFull === 0 ? 'Paid' : feeDueFull === semFeeFull ? 'Unpaid' : 'Partial');
+          const feeStatusIcon = feeStatusFull === 'Paid' ? '✅ Paid' : feeStatusFull === 'Partial' ? `🟡 Partial (₹${feeDueFull.toLocaleString('en-IN')} due)` : `🔴 Unpaid (₹${feeDueFull.toLocaleString('en-IN')} due)`;
+
           answerText = `### 🎓 Student Profile & Academic Details for **${student.name}**\n\n` +
             `| Academic & Campus Attribute | Registered Record |\n` +
             `| :--- | :--- |\n` +
@@ -945,6 +982,8 @@ app.post('/api/chat', async (req, res) => {
             `| **Academic CGPA** | **\`${student.cgpa}\` / 10.00** |\n` +
             `| **Faculty Mentor / Advisor** | **${student.advisor}** |\n` +
             `| **Hostel Room** | **${student.hostelRoom}** |\n` +
+            `| **Scholarship** | ${isScholarFull ? '📚 Scholarship Holder' : '💼 Non-Scholarship'} |\n` +
+            `| **Semester Fee Due** | **₹${feeDueFull.toLocaleString('en-IN')}** — ${feeStatusIcon} |\n` +
             `| **Institutional Email** | \`${student.email}\` |\n\n` +
             `*Fetched live from MongoDB Atlas \`students_data\` collection.*`;
         }
