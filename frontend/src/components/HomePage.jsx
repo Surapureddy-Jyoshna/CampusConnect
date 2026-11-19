@@ -221,7 +221,7 @@ export default function HomePage({ onGetStarted }) {
             {/* Right: Clean Professional Portal Card (5 cols) */}
             <div className="lg:col-span-5">
               <div className="bg-slate-900/90 border border-slate-700/80 rounded-2xl p-6 shadow-xl backdrop-blur-xs">
-                
+
                 {/* Header */}
                 <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-800">
                   <div className="flex items-center space-x-3">
@@ -243,7 +243,7 @@ export default function HomePage({ onGetStarted }) {
                 <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2.5">
                   Quick Access
                 </p>
-                
+
                 <div className="space-y-2">
                   {QUICK_LINKS.map((link) => (
                     <button
