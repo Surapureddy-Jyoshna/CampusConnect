@@ -10659,5 +10659,39 @@
       "feeStatus": "Unpaid",
       "feeSem": "Semester VII (Odd 2026-27)"
     }
+  ],
+  "admins": [
+    {
+      "id": "EMP-IT-008",
+      "name": "Mrs. Shanthi Victoria",
+      "role": "admin",
+      "designation": "Associate Professor & Controller of Examinations",
+      "department": "Department of Information Technology, Rathinam Technical Campus",
+      "email": "shanthi.victoria@rathinam.ac.in",
+      "phone": "+91 94432 04812",
+      "password": "admin123",
+      "accessScope": "Master Administrator (All Batches: P1, P2, E1, E2, E3, E4)",
+      "officeLocation": "Academic Administrative Block, Room 204",
+      "avatar": "SV",
+      "avatarBg": "bg-slate-900",
+      "_id": "local_a_1",
+      "createdAt": "2026-11-19T04:42:13.102Z"
+    },
+    {
+      "id": "ADMIN",
+      "name": "CampusConnect Super Administrator",
+      "role": "admin",
+      "designation": "System Administrator & Examination Controller",
+      "department": "Central Administration & Academic Cell",
+      "email": "admin@rguktrkv.ac.in",
+      "phone": "+91 8520 252524",
+      "password": "admin123",
+      "accessScope": "Master Administrator (All Batches: P1, P2, E1, E2, E3, E4)",
+      "officeLocation": "Academic Administrative Block, Main Server Room",
+      "avatar": "AD",
+      "avatarBg": "bg-slate-900",
+      "_id": "local_a_2",
+      "createdAt": "2026-11-19T04:42:13.104Z"
+    }
   ]
 }

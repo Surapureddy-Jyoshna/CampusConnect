@@ -13,7 +13,8 @@ import ChatSession from './models/ChatSession.js';
 import Notice from './models/Notice.js';
 import User from './models/User.js';
 import StudentData from './models/StudentData.js';
-import { defaultKnowledgeItems, defaultNotices, defaultUsers } from './defaultKnowledge.js';
+import Admin from './models/Admin.js';
+import { defaultKnowledgeItems, defaultNotices, defaultUsers, defaultAdmins } from './defaultKnowledge.js';
 import { seedStudentDataCollection, ADVISORS } from './importStudentData.js';
 import { queryRAGEngine, segmentDocument } from './ragEngine.js';
 
@@ -33,6 +34,7 @@ let memoryChunks = [];
 let memoryNotices = [];
 let memoryUsers = [];
 let memoryStudentsData = [];
+let memoryAdmins = [];
 
 // Initialize Database & Seeds
 async function initializeData() {
@@ -75,7 +77,15 @@ async function initializeData() {
       }
       memoryStudentsData = await StudentData.find({}).lean();
 
-      console.log(`✅ Loaded ${memoryKnowledge.length} knowledge items, ${memoryNotices.length} notices, ${memoryUsers.length} users, and ${memoryStudentsData.length} students from MongoDB Atlas.`);
+      // 6. Admins (Collection: admins - dedicated collection for admin authentication)
+      const aCount = await Admin.countDocuments();
+      if (aCount === 0) {
+        console.log('Seeding initial administrator accounts to MongoDB Atlas (admins collection)...');
+        await Admin.insertMany(defaultAdmins);
+      }
+      memoryAdmins = await Admin.find({}).lean();
+
+      console.log(`✅ Loaded ${memoryKnowledge.length} knowledge items, ${memoryNotices.length} notices, ${memoryAdmins.length} admins, and ${memoryStudentsData.length} students from MongoDB Atlas.`);
     } catch (err) {
       console.error('Error initializing Atlas data:', err.message);
     }
@@ -117,13 +127,23 @@ async function initializeData() {
     } else {
       memoryStudentsData = store.students_data || [];
     }
+    // Admins
+    if (!store.admins || store.admins.length === 0) {
+      store.admins = defaultAdmins.map((admin, index) => ({
+        ...admin,
+        _id: 'local_a_' + (index + 1),
+        createdAt: new Date().toISOString()
+      }));
+    }
+    memoryAdmins = store.admins || [];
+
     writeLocalStore(store);
 
     memoryKnowledge = store.knowledge;
     memoryNotices = store.notices;
     memoryChunks = store.documents || [];
     memoryUsers = store.users || [];
-    console.log(`✅ Loaded ${memoryKnowledge.length} knowledge items, ${memoryNotices.length} notices, ${memoryUsers.length} users, and ${memoryStudentsData.length} students from local persistence store.`);
+    console.log(`✅ Loaded ${memoryKnowledge.length} knowledge items, ${memoryNotices.length} notices, ${memoryAdmins.length} admins, and ${memoryStudentsData.length} students from local persistence store.`);
   }
 }
 
@@ -184,6 +204,8 @@ app.get('/api/health', (req, res) => {
     noticesCount: memoryNotices.length,
     chunkCount: memoryChunks.length,
     usersCount: memoryUsers.length,
+    adminCount: memoryAdmins.length,
+    studentsCount: memoryStudentsData.length,
     timestamp: new Date().toISOString()
   });
 });
@@ -191,176 +213,65 @@ app.get('/api/health', (req, res) => {
 // ================= AUTHENTICATION & USER MANAGEMENT ================= //
 
 /**
- * User Registration / Sign Up
- * Takes: id (Roll No / Staff ID), name, role, batch, department, degree, email, phone, password, designation
+ * User Registration / Sign Up - DISABLED
+ * Signups are intentionally removed; only pre-existing students from students_data
+ * and administrators from the admins collection are permitted to log in.
  */
-app.post('/api/auth/signup', async (req, res) => {
-  try {
-    const {
-      id,
-      name,
-      role = 'student',
-      batch = 'E2',
-      department,
-      degree,
-      semester,
-      email,
-      phone,
-      password = 'password123',
-      designation
-    } = req.body;
-
-    if (!id || !name) {
-      return res.status(400).json({ error: 'ID Number (Roll No / Staff ID) and Full Name are required.' });
-    }
-
-    const normalizedId = id.trim().toUpperCase();
-
-    // Check if ID is in students_data (preloaded from PDF)
-    let preloadedStudent = null;
-    if (isAtlasConnected) {
-      preloadedStudent = await StudentData.findOne({ id: normalizedId });
-    } else {
-      const store = readLocalStore();
-      preloadedStudent = (store.students_data || memoryStudentsData || []).find(s => s.id?.toUpperCase() === normalizedId);
-    }
-
-    if (preloadedStudent) {
-      // Update password and contact info, preserve assigned name, attendance, cgpa, advisor, hostelRoom
-      preloadedStudent.password = password || 'password123';
-      if (email) preloadedStudent.email = email.trim();
-      if (phone) preloadedStudent.phone = phone.trim();
-
-      if (isAtlasConnected) {
-        await StudentData.findOneAndUpdate({ id: normalizedId }, {
-          password: preloadedStudent.password,
-          email: preloadedStudent.email,
-          phone: preloadedStudent.phone
-        });
-      } else {
-        const store = readLocalStore();
-        const idx = (store.students_data || []).findIndex(s => s.id?.toUpperCase() === normalizedId);
-        if (idx !== -1) {
-          store.students_data[idx] = { ...store.students_data[idx], ...preloadedStudent };
-          writeLocalStore(store);
-        }
-      }
-
-      return res.status(201).json({
-        success: true,
-        message: `Account activated for ${preloadedStudent.name} (${preloadedStudent.id})!`,
-        user: preloadedStudent
-      });
-    }
-
-    // Check if user already exists in User collection
-    if (isAtlasConnected) {
-      const existing = await User.findOne({ id: normalizedId });
-      if (existing) {
-        return res.status(400).json({ error: `User with ID Number "${normalizedId}" is already registered. Please login.` });
-      }
-    } else {
-      const existing = memoryUsers.find(u => u.id?.toUpperCase() === normalizedId);
-      if (existing) {
-        return res.status(400).json({ error: `User with ID Number "${normalizedId}" is already registered. Please login.` });
-      }
-    }
-
-    // Generate avatar initials
-    const initials = name.trim().split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase() || 'ST';
-    const bgColors = ['bg-blue-600', 'bg-indigo-600', 'bg-purple-600', 'bg-emerald-600', 'bg-rose-600', 'bg-sky-600', 'bg-amber-600'];
-    const randomBg = bgColors[Math.floor(Math.random() * bgColors.length)];
-
-    // Fetch / derive attendance, CGPA, advisor, hostel room strictly according to ID number
-    let idHash = 0;
-    for (let i = 0; i < normalizedId.length; i++) {
-      idHash = (idHash * 31 + normalizedId.charCodeAt(i)) & 0x7fffffff;
-    }
-    const assignedAttendance = (76 + (idHash % 22)) + '%'; // 76% to 97%
-    const assignedCgpa = (7.20 + ((idHash >> 2) % 256) / 100).toFixed(2); // 7.20 to 9.75
-    const assignedAdvisor = ADVISORS[idHash % ADVISORS.length];
-    const isFemale = req.body.gender ? (req.body.gender.toLowerCase().startsWith('f') || req.body.gender === 'Female') : (idHash % 2 === 0);
-    const assignedHostel = isFemale ? `GH2 - Room ${101 + (idHash % 40)}` : `BH2 - Room ${101 + (idHash % 40)}`;
-
-    const newUser = {
-      id: normalizedId,
-      name: name.trim(),
-      role: role || 'student',
-      gender: isFemale ? 'Female' : 'Male',
-      batch: role === 'admin' ? 'All' : (batch || 'E4'),
-      department: department || (role === 'admin' ? 'Department of Information Technology' : 'Computer Science & Engineering'),
-      degree: degree || (role === 'admin' ? 'Faculty & Administration' : `B.Tech ${batch || 'E4'}`),
-      semester: semester || (batch?.startsWith('P') ? 'Pre-University' : 'Semester VII'),
-      email: email ? email.trim() : `${normalizedId.toLowerCase()}@rguktrkv.ac.in`,
-      phone: phone ? phone.trim() : '+91 98421 00000',
-      password: password || 'password123',
-      attendance: assignedAttendance,
-      cgpa: assignedCgpa,
-      avatar: initials,
-      avatarBg: role === 'admin' ? 'bg-slate-900' : randomBg,
-      designation: designation || (role === 'admin' ? 'Academic Staff' : 'Student'),
-      advisor: assignedAdvisor,
-      hostelRoom: assignedHostel,
-      createdAt: new Date()
-    };
-
-    if (role === 'student') {
-      if (isAtlasConnected) {
-        await StudentData.findOneAndUpdate({ id: normalizedId }, newUser, { upsert: true, new: true });
-      } else {
-        const store = readLocalStore();
-        if (!store.students_data) store.students_data = [];
-        const existingIdx = store.students_data.findIndex(s => s.id?.toUpperCase() === normalizedId);
-        if (existingIdx !== -1) {
-          store.students_data[existingIdx] = newUser;
-        } else {
-          store.students_data.push(newUser);
-        }
-        writeLocalStore(store);
-      }
-    }
-
-    if (isAtlasConnected) {
-      const created = await User.create(newUser);
-      memoryUsers = await User.find({}).lean();
-      return res.status(201).json({
-        success: true,
-        message: `Account created successfully for ${name}!`,
-        user: created
-      });
-    } else {
-      newUser._id = 'local_u_' + Date.now();
-      memoryUsers.unshift(newUser);
-      const store = readLocalStore();
-      store.users = memoryUsers;
-      writeLocalStore(store);
-      return res.status(201).json({
-        success: true,
-        message: `Account created successfully for ${name}!`,
-        user: newUser
-      });
-    }
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
+app.post('/api/auth/signup', (req, res) => {
+  return res.status(403).json({
+    error: 'Registration is disabled. Students must authenticate using their registered student records, and administrators must be registered in the admins collection.'
+  });
 });
 
 /**
  * User Login
- * Takes: id (ID Number), password, role
- * Fetches student from students_data collection (or User collection for admin) by ID number
- * and returns their registered Name, Attendance, CGPA, Advisor, Hostel Room (GH2/BH2) & details!
+ * Takes: id (ID Number), password, role ('student' | 'admin')
+ * 
+ * Rules:
+ * 1. If role === 'admin':
+ *    Strictly checks the `admins` collection. Only valid admins can access the admin dashboard!
+ * 2. If role === 'student':
+ *    Strictly checks the `students_data` collection for student authentication.
  */
 app.post('/api/auth/login', async (req, res) => {
   try {
-    const { id, password, role } = req.body;
-    if (!id) {
+    const { id, password, role = 'student' } = req.body;
+    if (!id || !id.trim()) {
       return res.status(400).json({ error: 'Please enter your ID Number (Roll Number or Staff ID).' });
     }
 
     const normalizedId = id.trim().toUpperCase();
+    const inputPassword = (password || '').trim();
 
-    // 1. FIRST check the uploaded students_data collection (360 students from PDF)
+    // ── 1. ADMIN AUTHENTICATION (Strictly checks `admins` collection) ──
+    if (role === 'admin') {
+      let admin = null;
+      if (isAtlasConnected) {
+        admin = await Admin.findOne({ id: normalizedId }).lean();
+      } else {
+        const store = readLocalStore();
+        admin = (store.admins || memoryAdmins || []).find(a => a.id?.toUpperCase() === normalizedId);
+      }
+
+      if (!admin) {
+        return res.status(403).json({
+          error: `Access Denied: "${normalizedId}" is not in the administrator collection. Only authorized administrators can access the admin dashboard.`
+        });
+      }
+
+      const expectedAdminPass = admin.password || 'admin123';
+      if (inputPassword && inputPassword !== expectedAdminPass && inputPassword !== 'admin123') {
+        return res.status(401).json({ error: 'Incorrect password for this administrator account.' });
+      }
+
+      return res.json({
+        success: true,
+        message: `Welcome back, Administrator ${admin.name}!`,
+        user: { ...admin, role: 'admin' }
+      });
+    }
+
+    // ── 2. STUDENT AUTHENTICATION (Strictly checks `students_data` collection) ──
     let student = null;
     if (isAtlasConnected) {
       student = await StudentData.findOne({ id: normalizedId }).lean();
@@ -370,45 +281,41 @@ app.post('/api/auth/login', async (req, res) => {
     }
 
     if (student) {
-      // Validate password if provided and not default
-      if (password && student.password && student.password !== password && password !== 'password123') {
+      const expectedStudentPass = student.password || 'password123';
+      if (inputPassword && inputPassword !== expectedStudentPass && inputPassword !== 'password123') {
         return res.status(401).json({ error: 'Incorrect password for this student ID.' });
       }
 
       return res.json({
         success: true,
         message: `Welcome back, ${student.name}!`,
-        user: student
+        user: { ...student, role: 'student' }
       });
     }
 
-    // 2. If not found in students_data, check User collection (for Admin or custom users)
-    let user = null;
+    // ── 3. Fallback: If role wasn't explicitly passed, check if it's an admin ──
+    let fallbackAdmin = null;
     if (isAtlasConnected) {
-      user = await User.findOne({ id: normalizedId }).lean();
+      fallbackAdmin = await Admin.findOne({ id: normalizedId }).lean();
     } else {
-      user = memoryUsers.find(u => u.id?.toUpperCase() === normalizedId);
+      const store = readLocalStore();
+      fallbackAdmin = (store.admins || memoryAdmins || []).find(a => a.id?.toUpperCase() === normalizedId);
     }
 
-    // Also check if admin logged in by username 'admin' or 'EMP-IT-008'
-    if (!user && (normalizedId === 'ADMIN' || normalizedId === 'ADMIN123' || normalizedId === 'EMP-IT-008')) {
-      user = defaultUsers.find(u => u.role === 'admin');
-    }
-
-    if (user) {
-      if (password && user.password && user.password !== password && password !== 'password123' && password !== 'admin123') {
-        return res.status(401).json({ error: 'Incorrect password for this ID number.' });
+    if (fallbackAdmin) {
+      const expectedAdminPass = fallbackAdmin.password || 'admin123';
+      if (inputPassword && inputPassword !== expectedAdminPass && inputPassword !== 'admin123') {
+        return res.status(401).json({ error: 'Incorrect administrator password.' });
       }
-
       return res.json({
         success: true,
-        message: `Welcome back, ${user.name}!`,
-        user
+        message: `Welcome back, Administrator ${fallbackAdmin.name}!`,
+        user: { ...fallbackAdmin, role: 'admin' }
       });
     }
 
     return res.status(404).json({
-      error: `No student or staff account found with ID "${normalizedId}". Please verify your Roll Number (e.g. R210177, R210137) or Sign Up.`
+      error: `No student record found with ID "${normalizedId}". Please verify your university Roll Number (e.g. R210688, R210177, R210137).`
     });
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -417,12 +324,13 @@ app.post('/api/auth/login', async (req, res) => {
 
 /**
  * Get user by ID Number
+ * Checks students_data first, then admins collection.
  */
 app.get('/api/auth/user/:id', async (req, res) => {
   try {
     const normalizedId = req.params.id.trim().toUpperCase();
 
-    // Check students_data first
+    // Check students_data collection
     let student = null;
     if (isAtlasConnected) {
       student = await StudentData.findOne({ id: normalizedId }).lean();
@@ -432,19 +340,20 @@ app.get('/api/auth/user/:id', async (req, res) => {
     }
 
     if (student) {
-      return res.json({ success: true, user: student });
+      return res.json({ success: true, user: { ...student, role: 'student' } });
     }
 
-    // Check User collection
-    let user = null;
+    // Check admins collection
+    let admin = null;
     if (isAtlasConnected) {
-      user = await User.findOne({ id: normalizedId }).lean();
+      admin = await Admin.findOne({ id: normalizedId }).lean();
     } else {
-      user = memoryUsers.find(u => u.id?.toUpperCase() === normalizedId);
+      const store = readLocalStore();
+      admin = (store.admins || memoryAdmins || []).find(a => a.id?.toUpperCase() === normalizedId);
     }
 
-    if (user) {
-      return res.json({ success: true, user });
+    if (admin) {
+      return res.json({ success: true, user: { ...admin, role: 'admin' } });
     }
 
     return res.status(404).json({ error: 'User not found' });

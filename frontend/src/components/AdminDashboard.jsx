@@ -3,10 +3,27 @@ import AdminNoticesPanel from './AdminNoticesPanel.jsx';
 import AdminKnowledgePanel from './AdminKnowledgePanel.jsx';
 import DocumentManager from './DocumentManager.jsx';
 import UserProfileBanner from './UserProfileBanner.jsx';
-import { Bell, BookOpen, Layers, Settings, Sparkles } from 'lucide-react';
+import { Bell, BookOpen, Layers, Settings, Sparkles, ShieldAlert } from 'lucide-react';
 
 export default function AdminDashboard({ currentUser, onTestQuery, onOpenEditModal, onAddNew }) {
   const [adminTab, setAdminTab] = useState('notices'); // 'notices' | 'knowledge' | 'docs'
+
+  // Access control check: Only users with role === 'admin' can access
+  if (currentUser?.role !== 'admin') {
+    return (
+      <div className="max-w-xl mx-auto px-4 py-16 text-center">
+        <div className="w-16 h-16 mx-auto mb-4 rounded-3xl bg-rose-100 border border-rose-200 flex items-center justify-center text-rose-600 shadow-sm">
+          <ShieldAlert className="w-8 h-8" />
+        </div>
+        <h2 className="text-xl font-black text-slate-900 tracking-tight mb-2">
+          Administrator Access Restricted
+        </h2>
+        <p className="text-xs text-slate-600 leading-relaxed max-w-md mx-auto mb-6">
+          Only verified staff and faculty accounts registered in the university <strong className="font-mono text-slate-800">admins</strong> collection are authorized to access the Admin Dashboard.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">

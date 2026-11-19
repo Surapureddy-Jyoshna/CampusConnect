@@ -33,8 +33,8 @@ const DEPARTMENTS = [
 ];
 
 const QUICK_LINKS = [
-  { icon: LogIn, label: 'Student Portal', desc: 'Login to your personalized dashboard', action: 'signin' },
-  { icon: UserPlus, label: 'New Registration', desc: 'First-time student account setup', action: 'signup' },
+  { icon: LogIn, label: 'Student Portal', desc: 'Login to your personalized dashboard', action: 'student' },
+  { icon: GraduationCap, label: 'Academic & Fee Records', desc: 'Verify attendance, CGPA & semester fees', action: 'student' },
   { icon: Shield, label: 'Admin Portal', desc: 'Faculty & administrative staff login', action: 'admin' },
   { icon: Bell, label: 'Notice Board', desc: 'Official batch circulars & notifications', action: 'notices' },
 ];
@@ -50,9 +50,8 @@ export default function HomePage({ onGetStarted }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleQuickLink = (action) => {
-    if (action === 'signin' || action === 'admin') onGetStarted('signin');
-    else if (action === 'signup') onGetStarted('signup');
-    else if (action === 'notices') onGetStarted('signin');
+    if (action === 'admin') onGetStarted('admin');
+    else onGetStarted('student');
   };
 
   return (
@@ -129,7 +128,7 @@ export default function HomePage({ onGetStarted }) {
             {/* Primary Action Button */}
             <div className="flex items-center space-x-3">
               <button
-                onClick={() => onGetStarted('signin')}
+                onClick={() => onGetStarted('student')}
                 className="hidden sm:flex items-center space-x-2 px-5 py-2.5 bg-[#0f2042] hover:bg-[#1a3468] text-white text-xs font-bold rounded-lg transition-colors shadow-2xs"
               >
                 <LogIn className="w-4 h-4" />
@@ -155,8 +154,8 @@ export default function HomePage({ onGetStarted }) {
               </a>
             ))}
             <div className="pt-2 border-t border-slate-200 flex flex-col gap-2">
-              <button onClick={() => onGetStarted('signin')} className="w-full py-2.5 bg-[#0f2042] text-white text-xs font-bold rounded-lg">Student Login</button>
-              <button onClick={() => onGetStarted('signup')} className="w-full py-2.5 border border-slate-300 text-slate-700 text-xs font-bold rounded-lg">Register</button>
+              <button onClick={() => onGetStarted('student')} className="w-full py-2.5 bg-[#0f2042] text-white text-xs font-bold rounded-lg">Student Login</button>
+              <button onClick={() => onGetStarted('admin')} className="w-full py-2.5 border border-slate-300 text-slate-700 text-xs font-bold rounded-lg">Admin / Faculty Login</button>
             </div>
           </div>
         )}
@@ -203,18 +202,18 @@ export default function HomePage({ onGetStarted }) {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <button
-                  onClick={() => onGetStarted('signup')}
+                  onClick={() => onGetStarted('student')}
                   className="flex items-center justify-center space-x-2 px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-lg transition-colors shadow-sm text-sm"
                 >
-                  <UserPlus className="w-4 h-4" />
-                  <span>Student Registration</span>
+                  <LogIn className="w-4 h-4" />
+                  <span>Student Portal Login</span>
                 </button>
                 <button
-                  onClick={() => onGetStarted('signin')}
+                  onClick={() => onGetStarted('admin')}
                   className="flex items-center justify-center space-x-2 px-6 py-3 bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-white font-semibold rounded-lg transition-colors text-sm"
                 >
-                  <LogIn className="w-4 h-4" />
-                  <span>Existing Student Login</span>
+                  <Shield className="w-4 h-4 text-indigo-400" />
+                  <span>Admin & Faculty Login</span>
                 </button>
               </div>
             </div>

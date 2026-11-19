@@ -23,8 +23,8 @@ export default function App() {
   // If user already logged in (from localStorage), skip home and go to dashboard
   const [page, setPage] = useState(() => currentUser ? 'dashboard' : 'home');
 
-  // Which auth mode to open: 'signin' | 'signup'
-  const [authMode, setAuthMode] = useState('signin');
+  // Role to pre-select on login page: 'student' | 'admin'
+  const [initialRole, setInitialRole] = useState('student');
 
   const [currentBatch, setCurrentBatch] = useState(() => {
     return currentUser?.batch || 'E4';
@@ -76,9 +76,9 @@ export default function App() {
     }
   }, [currentUser?.id]);
 
-  // Called from HomePage when user clicks "Sign Up" or "Sign In"
-  const handleGetStarted = (mode = 'signin') => {
-    setAuthMode(mode);
+  // Called from HomePage when user clicks Login
+  const handleGetStarted = (role = 'student') => {
+    setInitialRole(role === 'admin' ? 'admin' : 'student');
     setPage('auth');
   };
 
@@ -128,11 +128,11 @@ export default function App() {
     return <HomePage onGetStarted={handleGetStarted} />;
   }
 
-  // 2. Auth Page (Login / Sign Up)
+  // 2. Auth Page (Login)
   if (page === 'auth') {
     return (
       <LoginPage
-        initialMode={authMode}
+        initialRole={initialRole}
         onLoginSuccess={handleLoginSuccess}
         onBackToHome={() => setPage('home')}
         health={health}
